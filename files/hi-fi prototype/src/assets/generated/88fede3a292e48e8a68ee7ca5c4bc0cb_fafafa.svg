@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Table</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="stroked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Kitchen" sketch:type="MSLayerGroup" transform="translate(-367.000000, -1198.000000)" stroke="#fafafa" stroke-width="2" stroke-linejoin="round">
+            <g id="Table" transform="translate(371.000000, 1216.000000)" sketch:type="MSShapeGroup">
+                <ellipse id="Oval-746" stroke-linecap="round" cx="27" cy="6.5" rx="27" ry="6.5"></ellipse>
+                <ellipse id="Oval-748" stroke-linecap="round" cx="27" cy="6" rx="16" ry="3"></ellipse>
+                <path d="M27,13 L27,38" id="Line" stroke-linecap="square"></path>
+                <path d="M27,32 C27,35.3137085 29.6862915,38 33,38 C36.3137085,38 39,35.3137085 39,32" id="Oval-747" stroke-linecap="round"></path>
+                <path d="M15,32 C15,35.3137085 17.6862915,38 21,38 C24.3137085,38 27,35.3137085 27,32" id="Oval-747" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
