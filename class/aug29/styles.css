@@ -5,10 +5,13 @@ body {
 }
 
 /* Tables */
+table{
+    border-collapse: collapse;
+}
 
 td,th {
     border: 1px solid red;
-    border-collapse: collapse;
+    background: pink;
 }
 
 /* Typography */
