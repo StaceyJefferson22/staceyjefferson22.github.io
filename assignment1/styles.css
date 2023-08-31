@@ -1,0 +1,17 @@
+body{
+    background-color: red;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td,th{
+    border:black;
+    background: yellow;
+}
+
+img{
+    width: 400px; 
+    height: 300px;
+}
