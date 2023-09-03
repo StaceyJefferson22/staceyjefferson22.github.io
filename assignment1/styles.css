@@ -1,17 +1,65 @@
+/* Structure */
 body{
     background-color: red;
+}
+#content{
+    background: red;
+    width: 75%;
+    margin: auto;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+/*Navigation */
+a {
+    text-decoration: none;
+    background: burlywood;
+    color: black;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+/*Table */
+td,th{
+    border: 1px solid black;
+    padding: 4px;
+    background: yellow;
+}
+
+
+th{
+    backhground: green;
+}
+
+td{
+    background: white;
+}
+/*Typography */
+
+h1 {
+    color: gold;
+    font-style: italic;
+}
+
+h2 {
+    color: yellow;
 }
 
 table{
     border-collapse: collapse;
 }
 
-td,th{
-    border:black;
-    background: yellow;
+#g-thing {
+    font-style: italic;
 }
 
+strong{
+    color: deeppink;
+}
+/* Images */
 img{
+    padding: 10px;
+    margin: 10px;
     width: 400px; 
     height: 300px;
 }
+
