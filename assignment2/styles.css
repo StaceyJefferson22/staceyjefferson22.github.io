@@ -1,0 +1,76 @@
+/* Structure */
+body {
+    background-color: #E0AD36;
+    font-family:'Times New Roman', Times, serif;
+    background: url(https://i.pinimg.com/originals/6d/37/4b/6d374b9476f190ff9c7d8d4502b5a436.jpg);
+}
+
+#content {
+    background-color: blue(218, 219, 169, 0.7);
+    width: 75%;
+    margin: auto;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+/* Navigation */
+
+
+#main-nav a{
+    text-decoration: dotted;
+    background: tan;
+    color:bkack;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+main-nav a{
+    background: orange;
+}
+
+/* Table */
+td,th {
+    border: 1px solid black;
+    padding: 4px;
+    background-color: brown;
+}
+
+th{
+    background: yellow;
+}
+
+th{
+    background: skyblue;
+}
+
+table{
+    border-collapse: collapse;
+}
+/* Typography */
+
+h1{
+    color: #2421B8;
+    font-style: italic;
+}
+
+h2{
+    color: #CC2F41;
+}
+
+#l-things {
+    font-style: italic;
+}
+
+strong {
+    color: orangered;
+}
+
+/* Images */
+
+img {
+    padding: 10px;
+    margin: 10px;
+    border: 5 px solid red;
+    width: 400px;
+    height: 300px;
+}
