@@ -1,7 +1,7 @@
 /* Structure */
 body {
     background-color: #E0AD36;
-    font-family:'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background: url(https://i.pinimg.com/originals/6d/37/4b/6d374b9476f190ff9c7d8d4502b5a436.jpg);
 }
 
@@ -17,16 +17,17 @@ body {
 
 
 #main-nav a{
-    text-decoration: dotted;
-    background: tan;
-    color:bkack;
-    padding: 4px;
-    border-radius: 3px;
+    text-decoration: none;
+    background: #FF7C0E;
+    color:blue;
+    padding: 5px;
+    border-radius:  4px;
 }
 
-main-nav a{
-    background: orange;
+#main-nav a:hover {
+    background-color: green;
 }
+
 
 /* Table */
 td,th {
@@ -40,7 +41,7 @@ th{
 }
 
 th{
-    background: skyblue;
+    background: greenyellow;
 }
 
 table{
@@ -57,7 +58,7 @@ h2{
     color: #CC2F41;
 }
 
-#l-things {
+#l-table {
     font-style: italic;
 }
 
@@ -65,12 +66,16 @@ strong {
     color: orangered;
 }
 
+.large{
+    font-size: 25px;
+}
+
 /* Images */
 
 img {
-    padding: 10px;
-    margin: 10px;
-    border: 5 px solid red;
+    padding: 7px;
+    margin: 7px;
+    border: 10px solid brown;
     width: 400px;
     height: 300px;
 }
