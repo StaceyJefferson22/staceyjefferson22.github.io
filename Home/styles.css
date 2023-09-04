@@ -1,0 +1,48 @@
+/* Structure */
+
+body{
+    background-color:gold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: url(https://th.bing.com/th/id/R.a83dc0435134359d29501e4196170e8d?rik=QnXfLkC%2b8Jgz%2bQ&riu=http%3a%2f%2fblogs.winnipegsd.ca%2fbreakingnewground%2ffiles%2f2015%2f12%2fBinary_code-28fickh.jpg&ehk=3GZgG3Quz5UG88qfcwUGHRiErGC%2fyu81BtsLCWqDXws%3d&risl=&pid=ImgRaw&r=0);
+}
+
+#content{
+    background-color: gold;
+    width: 75%;
+    margin: auto;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+#main nav a{
+    text-decoration: none;
+    background: red;
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:link {
+    text-decoration: none;
+    color: green;
+}
+
+/*Typography */
+
+h1{
+    font-style: italic;
+    color:red;
+}
+
+h2{
+    color: brown;
+}
+
+strong {
+    color: orangered;
+}
+
+.important {
+    font-size: 25px;
+}
+/*Navigation
