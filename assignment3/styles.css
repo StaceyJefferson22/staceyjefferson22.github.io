@@ -23,9 +23,6 @@
     background-color:greenyellow;
 }
 
-#sidebar{
-    background-color: silver;
-}
 
 /* Navigation */
 #main-nav ul{
@@ -41,6 +38,10 @@
 #main-nav a {
     text-decoration: none;
     color: black;
+}
+
+#main-nav a:hover {
+    color: orange;
 }
 
 #main-footer {
