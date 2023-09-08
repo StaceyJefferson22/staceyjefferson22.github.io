@@ -1,0 +1,85 @@
+/* Structure */
+#main-header{
+    background-color: dodgerblue;
+}
+
+#main-content{
+    background-color: gold;
+    padding: 5px;
+}
+
+
+.col1of2, .col1of3, #sidebar{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.col1of2{
+    background-color:salmon;
+}
+
+.col1of3{
+    background-color:greenyellow;
+}
+
+#sidebar{
+    background-color: silver;
+}
+
+/* Navigation */
+#main-nav ul{
+    padding-left: 0;
+}
+#main-nav li {
+    list-style-type: none;
+    padding: 5px;
+    background-color:salmon;
+    border-bottom: 1px solid dodgerblue;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#main-footer {
+    background-color: dodgerblue;
+    padding: 5px;
+}
+
+/* Typography */
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#main-header h1{
+    text-align: center;
+}
+
+#main-footer p{
+    text-align: center;
+}
+
+
+/* Larger Resolution */
+@media (min-width: 900px) {
+    #main-nav ul,
+    .flex-container
+    {
+        display: flex;
+    }
+
+    #main-nav li,
+    .col1of2, 
+    .col1of3, 
+    .col1of4
+    {
+        flex:1;
+    }
+
+
+    body{
+        background-color: brown;
+    }
+}
