@@ -45,4 +45,32 @@ strong {
 .important {
     font-size: 25px;
 }
-/*Navigation
+
+.assignments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.assignment{
+    text-align: center;
+    width: 22%;
+    padding:10px;
+    margin:10px;
+    background: green;
+    
+}
+
+.assignment img{
+    height:300px;
+    width: 250px;
+    border: solid black; 
+    display: block; 
+    margin: auto;
+}
+
+.assignment img:hover{
+    border:solid white;
+}
+/*Naviga
+tion

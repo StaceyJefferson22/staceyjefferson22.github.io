@@ -3,6 +3,8 @@
     background-color: dodgerblue;
 }
 
+
+
 #main-content{
     background-color: gold;
     padding: 5px;
@@ -23,6 +25,9 @@
     background-color:greenyellow;
 }
 
+#sidebar{
+    background-color: silver;
+}
 
 /* Navigation */
 #main-nav ul{
@@ -64,12 +69,14 @@ body{
 
 
 /* Larger Resolution */
-@media (min-width: 900px) {
+@media (min-width: 900px) 
+{
     #main-nav ul,
     .flex-container
     {
         display: flex;
     }
+
 
     #main-nav li,
     .col1of2, 
