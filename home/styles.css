@@ -1,9 +1,10 @@
 /* Structure */
 
 body{
-    background-color:gold;
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: url(https://th.bing.com/th/id/R.a83dc0435134359d29501e4196170e8d?rik=QnXfLkC%2b8Jgz%2bQ&riu=http%3a%2f%2fblogs.winnipegsd.ca%2fbreakingnewground%2ffiles%2f2015%2f12%2fBinary_code-28fickh.jpg&ehk=3GZgG3Quz5UG88qfcwUGHRiErGC%2fyu81BtsLCWqDXws%3d&risl=&pid=ImgRaw&r=0);
+    background-color: black
+
 }
 
 #content{
@@ -30,11 +31,13 @@ a:link {
 /*Typography */
 
 h1{
+    text-align: center;
     font-style: italic;
     color:red;
 }
 
 h2{
+    text-align: center;
     color: brown;
 }
 
@@ -46,13 +49,17 @@ strong {
     font-size: 25px;
 }
 
+
+
+/*Navigation */
+
 .assignments{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.assignment{
+#assignment{
     text-align: center;
     width: 22%;
     padding:10px;
@@ -61,7 +68,7 @@ strong {
     
 }
 
-.assignment img{
+#assignment img{
     height:300px;
     width: 250px;
     border: solid black; 
@@ -69,8 +76,45 @@ strong {
     margin: auto;
 }
 
-.assignment img:hover{
+#assignment img:hover{
     border:solid white;
 }
-/*Naviga
-tion
+
+/*footer */
+
+#footer{
+    background-color: gold;
+    width: 75%;
+    margin: auto;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+#main-footer
+{
+
+    text-align: center;
+    background-color: green;
+    padding: 5px;
+}
+
+
+/*larger resolution */
+
+@media screen and (max-width: 900px)
+{
+
+.assignments
+{
+    flex-direction: column;
+}
+
+}
+
+@media screen and (min-width: 900px)
+{
+body{
+     background-color: url(https://th.bing.com/th/id/R.a83dc0435134359d29501e4196170e8d?rik=QnXfLkC%2b8Jgz%2bQ&riu=http%3a%2f%2fblogs.winnipegsd.ca%2fbreakingnewground%2ffiles%2f2015%2f12%2fBinary_code-28fickh.jpg&ehk=3GZgG3Quz5UG88qfcwUGHRiErGC%2fyu81BtsLCWqDXws%3d&risl=&pid=ImgRaw&r=0);
+}
+
+}
