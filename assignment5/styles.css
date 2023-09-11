@@ -1,0 +1,148 @@
+/* Structure */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-header,
+#main-footer {
+    margin: auto;
+    width: auto;
+    padding: 5px;
+}
+
+#main-header{
+    background-color: black;
+    top: 0px;
+    width:100%;
+    position: fixed;
+    transition: top 0.3s;
+}
+
+#main-footer{
+    background-color: maroon;
+}
+
+/* image */
+#images{
+    height: 300;
+    width: 300;
+}
+
+#rpic{
+    padding-left: 0px;
+    justify-content: right;
+}
+
+/* Horizontal Navigation */
+
+.hor-nav ul{
+    padding-left: 0px;
+}
+
+.hor-nav li{
+    list-style-type: none;
+    margin: 0 5px;
+    color: white;
+}
+
+.hor-nav a {
+    text-decoration: none;
+    color: white;
+}
+/* Main Navigation */
+
+/* #main-nav{
+    top: 50px;
+    width:100%;
+    position: fixed;
+    transition: top 0.3s;
+} */
+#main-nav ul{
+    padding-left: 0;
+}
+#main-nav li {
+    list-style-type: none;
+    padding: 5px;
+    background-color:red;
+    border-bottom: 1px solid red;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#main-nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+/* User Navigation */
+/* Typography */
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+h2{
+    text-align: center;
+}
+
+
+#main-footer, 
+#main-footer a{
+    color: white;
+}
+
+#main-footer ul{
+    padding-left: 1%;
+}
+
+#main-footer li{
+    list-style-type: none;
+}
+
+#main-footer a{
+    text-decoration: none;
+}
+
+.footer-logo-text{
+    font-size: 1.5em;
+}
+.flexb{
+    text-align: center;
+    color: white;
+}
+
+.flexr{
+    text-align: center;
+    background-color:  maroon;
+}
+
+.flexw{
+    text-align: center;
+    /*background-color: black;*/
+}
+/* Larger Resolution */
+
+@media only screen and (min-width: 768px) {
+    .main-nav ul,
+    .hor-nav ul,
+    .flex-container, 
+    .flex
+    {
+        display: flex;
+    }
+    #main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .flex-container {
+        justify-content: space-between;
+    }
+    .col1of2 {
+        flex:1;
+    }
+   
+}
