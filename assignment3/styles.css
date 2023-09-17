@@ -68,6 +68,11 @@ body{
 }
 
 
+.flex{
+    display: flex;
+}
+
+
 /* Larger Resolution */
 @media (min-width: 900px) 
 {
@@ -77,6 +82,11 @@ body{
         display: flex;
     }
 
+    .col1of2f
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     #main-nav li,
     .col1of2, 
@@ -84,6 +94,10 @@ body{
     .col1of4
     {
         flex:1;
+    }
+
+    .flex{
+        display:flex;
     }
 
 
