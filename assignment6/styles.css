@@ -13,8 +13,7 @@ body{
 }
 
 #main-header{
-    background-color: yellowgreen;
-
+    background-color: red;
 }
 
 #main-content{
@@ -22,11 +21,29 @@ body{
     height: 300px;
     margin: 5px;
     border-radius: 10px;
-    background-color: blue;
+    background-color: brown;
 }
 
 #main-footer{
-    background-color:aqua;
+    background-color:orangered;
+}
+
+.box1{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px; 
+}
+
+.box2{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;  
+}
+
+/* images */
+#bush{
+    height: 200px;
+    width: 200px;
 }
 
 /* typography */
