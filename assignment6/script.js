@@ -1,7 +1,13 @@
 const showBush = () => {
-    document.getElementById("Bush").classList.remove("hide");
+    document.getElementById("bush").classList.remove("hide");
 }
 
 const hideBush = () => {
-    document.getElementById("Bush").classList.add("hide");
+    document.getElementById("bush").classList.add("hide");
+}
+
+window.onload = () => {
+    //get button, tie function to clickage
+    document.getElementById("button-show").onclick = showBush;
+    document.getElementById("button-hide").onclick = hideBush;
 }
