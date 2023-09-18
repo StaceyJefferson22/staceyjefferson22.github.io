@@ -67,7 +67,7 @@ li{
 }
 .flex-container > div {
     padding: 12%;
-    border: 5px solid gold;
+    border: 11px solid gold;
     background-color: red;
 }
 .flex-container > div h2 {

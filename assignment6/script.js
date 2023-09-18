@@ -9,7 +9,7 @@ const hideBush = () => {
 
 //dance section
 const justDance = () => {
-    document.getElementById("heart").classList.add("dance");
+    document.getElementById("emoji").classList.add("dance");
 }
 
 //show comments made by user
