@@ -1,10 +1,11 @@
+
 /* Structure */
 
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#main-header,
+/*#main-header,
 #main-footer {
     margin: auto;
     width: auto;
@@ -14,56 +15,104 @@ body{
 
 #main-header{
     background-color: red;
-}
+} */
 
-#main-content{
+/* #main-content{
     padding: 5px;
-    height: 300px;
+    height: 600px;
     margin: 5px;
     border-radius: 10px;
     background-color: brown;
-}
+} */
 
 #main-footer{
-    background-color:orangered;
+    background-color:orange;
+    text-align: center;
+    padding:1%;
 }
 
-.box1{
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px; 
-}
-
-.box2{
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px;  
-}
 
 /* images */
 #bush{
     height: 200px;
-    width: 200px;
-}
-
-/* typography */
-h2{
-    text-align: center;
+    width: 300px;
 }
 
 .hide {
     display: none;
 }
 
+/* typography */
+h1 {
+    text-align: center;
+    background-color: orange;
+}
+
+h2{
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
+    list-style: none;
+}
+
+/* div class */
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.flex-container > div {
+    padding: 12%;
+    border: 5px solid gold;
+    background-color: red;
+}
+.flex-container > div h2 {
+    text-align: center;
+}
+
+/* Animation */
+
+.dance{
+    position: relative;
+    animation-name: animate;
+    animation-duration: 3s;
+    animation-iteration-count: 5;
+}
+
+/* make animation jump */
+@keyframes animate{
+    0%{
+        transform: none;
+    }
+    33%{
+        transform:rotate(45deg);
+    }
+    66%{
+        transform:rotate(90deg);
+    }
+    100%{
+        transform: none;
+    }
+}
+
+/* comment IDs */
+#comments {
+    background-color: green;
+}
+#comments h3{
+    color: green;
+    background-color: yellowgreen;
+    text-align: left
+}
 
 
-/* Larger Resolution */
-
-@media only screen and (min-width: 768px) {
-    .flex-container
-    {
+@media only screen and (max-width: 1000px) {
+    .flex-container{
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
     }
 }

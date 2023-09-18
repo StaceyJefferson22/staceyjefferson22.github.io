@@ -12,28 +12,49 @@
         </header>
 
         <main id ="main-content">
-            <section class="box1">
+            
                 <div class="flex-container">
-                    <h2>Hide and Seek</h2>
-
-                    <p>
+                    <div id ="box-1">
+                        <h2>Hide and Seek</h2>
                         <button id="button-show">Show</button>
                         <button id="button-hide">Hide</button>
-                        <img id="bush" src="pictures/bush.jpg" class="hide">
-                     </p>
-                </div>
-            </section>
-             <section class ="box2">
-                <div class="flex-container">
-                    <h2>Animate</h2>
+                        <img id="bush" src="../../pictures/intobush.jpg" class="hide">
+                    </div>
+        
+                    <div id ="box-2">
+                        <h2>Animate</h2>
+                        <button id="button-dance">Dance</button>
+                        <p id="heart">&#128512;</p>
+                     </div>
 
-                    <button id="button-move">Move Words!</button>
+                     <div id="box-3">
+                        <h2>Input</h2>
+                        <li>
+                            <label for="product">Product Name: </label>
+                            <input type="input" id="product" class="output">
+                        </li>
+                        <li>
+                            <label for="comment">Comment: </label>
+                            <input type="input" id="comment" class="output">
+                        </li>
+                        <li>
+                            <label for="rate">Rating: </label>
+                            <input type="number-input" id="rating" class="output" min="1" max="5">
+                        </li>
+                        <li>
+                            <label for="username">User Name: </label>
+                            <input type="input" id="username" class="output">
+                        </li>
+                        <button id="button-comment">Add Comment</button>
+                        <div id="comments">
+
+                        </div>
+                     </div>
                 </div>
-                </section>
         </main>
         
-        <footer id ="main-footer">
-            <p>Goodbye!</p>
+        <footer id="main-footer">
+            <h3>Goodbye!</h3>
         </footer>
     </body>
 </html>
