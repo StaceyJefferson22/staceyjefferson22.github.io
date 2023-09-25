@@ -1,26 +1,23 @@
-//toggling naviagation pane
-const toggleNav = () => {
+const toggleHamburger = () => {
     document.getElementById("exercises").classList.toggle("exercise-hide");
 }
 
-//showing exercises 1-2
-const showExercise1 = () => {
+const toggleExercise1 = () => {
     document.getElementById("ex-1").classList.toggle("hidden");
     if(!document.getElementById("ex-2").classList.contains("hidden")){
         document.getElementById("ex-2").classList.toggle("hidden");
     }
 }
 
-const showExercise2 = () => {
+const toggleExercise2 = () => {
     document.getElementById("ex-2").classList.toggle("hidden");
     if(!document.getElementById("ex-1").classList.contains("hidden")){
         document.getElementById("ex-1").classList.toggle("hidden");
     }
 }
 
-//comparing ages
-const comparingAges = () =>{
-    const compareAges = document.getElementById("compareAges");
+const compareAges = () =>{
+    const orderedAges = document.getElementById("orderedAges");
 
     const name1 = document.getElementById("name-1").ariaValueMax;
     const age1 = parseInt(document.getElementById("age-1").value);
@@ -36,7 +33,7 @@ const comparingAges = () =>{
 
     var youngest, middle, oldest, lesser, equal, greater;
 
-    compareAges.classList.add("hidden");
+    orderedAges.classList.add("hidden");
     error1.classList.add("hidden");
     error2.classList.add("hidden");
     error3.classList.add("hidden");
@@ -101,56 +98,54 @@ const comparingAges = () =>{
         orderedAges.innerHTML = '<section> from oldest to youngest ${eldest} at ${highest} years old, ${middle} at ${median}, and ${youngest} at ${lowest} years old<section>';
     }
 }
-    //displaying the fundraiser therometer
-    const fdrdisplay = () => {
-        const fdrPot = parseInt(document.getElementById("fdr").value);
-        const fdrT = document.getElementById("gradient");
-        const error = document.getElementById("fdr-error");
+    const displayingfundraising = () => {
+        const funraisingAmount = parseInt(document.getElementById("fund-raising-txt").value);
+        const funraisingBox = document.getElementById("box");
+        const error = document.getElementById("fund-raising-error");
         const root = document.querySelector(":root");
 
-        const fdrPercent =(funraisingAmount/10000)*100;
-        console.log(fdrT);
+        const funraisingGoal =(funraisingAmount/10000)*100;
+        console.log(funraisingBox);
 
-        if(fdrPot < 1){
+        if(funraisingAmount < 1){
             error.innerHTML ="Please enter a number greater than 1.";
         }
 
-        else if (fdrPot > 10000){
+        else if (funraisingAmount > 10000){
             error.innerHTML ="Please enter a number up to 10,000.";
         }
-        else if(isNaN(fdrPot)) {
+        else if(isNaN(funraisingAmount)) {
             error:innerHTML ="Please enter a number";
         }
 
         else{
-            if(fdrPercent  <25 ) {
+            if(funraisingGoal  <25 ) {
                 console.log("Under 25%");
             }
-            else if((fdrPercent >= 25)&& (fdrPercent <50)) {
+            else if((funraisingGoal >= 25)&&! (funraisingGoal >49)) {
                 console.log("Between 25 and 50%");
-                root.style.setProperty("--gradient-empty", "75%");
+                root.style.setProperty("--box-empty", "75%");
             }
-            else if((fdrPercent >= 50)&& (fdrPercent <75)) {
+            else if((funraisingGoal >= 50)&&! (funraisingGoal >74)) {
                 console.log("Between 50 and 75%");
-                root.style.setProperty("--gradient-empty", "50%");
+                root.style.setProperty("--box-empty", "50%");
             }
-            else if((fdrPercent >= 75)&& (fdrPercent <100)) {
+            else if((funraisingGoal >= 75)&&! (funraisingGoal >99)) {
                 console.log("Between 75 and 100%");
-                root.style.setProperty("--gradient-empty", "25%");
+                root.style.setProperty("--box-empty", "25%");
             }
             else{
                 console.log("At 100%");
-                root.style.setProperty("--gradient-empty","0%");
+                root.style.setProperty("--box-empty","0%");
             }
         }
-        fdrT.classList.add("filled-T");
+        funraisingBox.classList.add("filled-box");
     }
 
-    //tying in functions
     window.onload = () => {
-        document.getElementById("nav-toggle").onclick = toggleNav;
-        document.getElementById("ex-1-link").onclick = showExercise1;
-        document.getElementById("ex-2-link").onclick = showExercise2;
-        document.getElementById("age-compare-button").onclick = comparingAges;
-        document.getElementById("display-button").onclick = fdrdisplay;
+        document.getElementById("hamburger").onclick = toggleHamburger;
+        document.getElementById("ex-1-link").onclick = toggleExercise1;
+        document.getElementById("ex-2-link").onclick = toggleExercise2;
+        document.getElementById("age-compare-button").onclick = compareAges;
+        document.getElementById("display-button").onclick = displayingfundraising;
     }
