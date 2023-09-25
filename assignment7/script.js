@@ -97,8 +97,8 @@ const comparingAges = () =>{
                 youngest =name1;
             }
         }
-        orderedAges.classList.remove("hidden");
-        orderedAges.innerHTML = '<section> from oldest to youngest ${eldest} at ${highest} years old, ${middle} at ${median}, and ${youngest} at ${lowest} years old<section>';
+        comparingAges.classList.remove("hidden");
+        comparingAges.innerHTML = '<section> from oldest to youngest ${eldest} at ${highest} years old, ${middle} at ${median}, and ${youngest} at ${lowest} years old<section>';
     }
 }
     //displaying the fundraiser therometer

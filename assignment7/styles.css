@@ -129,12 +129,6 @@ input{
     .nav-line{
         display: none;
     }
-    #exercises{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
     .exercise-hide{
         display: flex;
         flex-direction: column;
