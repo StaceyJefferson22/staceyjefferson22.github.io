@@ -124,6 +124,8 @@ input{
     display: none;
 }
 
+/* footer */
+
 /*larger resolution*/
 @media screen and (min-width: 900px) {
     .nav-line{
