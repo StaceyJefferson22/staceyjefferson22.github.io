@@ -58,7 +58,7 @@ a:active{
 
 .flex-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /*Hamburger Menu */
@@ -131,6 +131,6 @@ input{
     }
     .exercise-hide{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 }

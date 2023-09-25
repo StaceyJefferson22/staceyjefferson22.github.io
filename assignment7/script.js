@@ -20,7 +20,7 @@ const showExercise2 = () => {
 
 //comparing ages
 const comparingAges = () =>{
-    const compareAges = document.getElementById("compareAges");
+    const compareAges = document.getElementById("compare-Ages");
 
     const name1 = document.getElementById("name-1").ariaValueMax;
     const age1 = parseInt(document.getElementById("age-1").value);
@@ -119,7 +119,7 @@ const comparingAges = () =>{
             error.innerHTML ="Please enter a number up to 10,000.";
         }
         else if(isNaN(fdrPot)) {
-            error:innerHTML ="Please enter a number";
+            error.innerHTML ="Please enter a number";
         }
 
         else{
@@ -151,6 +151,6 @@ const comparingAges = () =>{
         document.getElementById("nav-toggle").onclick = toggleNav;
         document.getElementById("ex-1-link").onclick = showExercise1;
         document.getElementById("ex-2-link").onclick = showExercise2;
-        document.getElementById("age-compare-button").onclick = comparingAges;
+        document.getElementById("compare-ages-button").onclick = comparingAges;
         document.getElementById("display-button").onclick = fdrdisplay;
     }
