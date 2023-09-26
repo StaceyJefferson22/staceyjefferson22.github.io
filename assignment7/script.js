@@ -3,7 +3,7 @@ const toggleNav = () => {
     document.getElementById("exercises").classList.toggle("exercise-hide");
 }
 
-//showing exercises 1-2
+//showing exercises 1
 const showExercise1 = () => {
     document.getElementById("ex-1").classList.toggle("hidden");
     if(!document.getElementById("ex-2").classList.contains("hidden")){
@@ -11,102 +11,105 @@ const showExercise1 = () => {
     }
 }
 
-const showExercise2 = () => {
-    document.getElementById("ex-2").classList.toggle("hidden");
-    if(!document.getElementById("ex-1").classList.contains("hidden")){
-        document.getElementById("ex-1").classList.toggle("hidden");
-    }
-}
-
 //comparing ages
-const comparingAges = () =>{
-    const compareAges = document.getElementById("compare-Ages");
+    const comparingAges = () =>{
+        const compareAges = document.getElementById("compare-Ages");
 
-    const name1 = document.getElementById("name-1").value; //had ariaValueMax here by mistake
-    const age1 = parseInt(document.getElementById("age-1").value);
-    const error1 = document.getElementById("error-1");
+        const name1 = document.getElementById("name-1").value; //had ariaValueMax here by mistake
+        const age1 = parseInt(document.getElementById("age-1").value);
+        const error1 = document.getElementById("error-1");
 
-    const name2 = document.getElementById("name-2").value;
-    const age2 = parseInt(document.getElementById("age-2").value);
-    const error2 = document.getElementById("error-2");
+        const name2 = document.getElementById("name-2").value;
+        const age2 = parseInt(document.getElementById("age-2").value);
+        const error2 = document.getElementById("error-2");
 
-    const name3 = document.getElementById("name-3").value;
-    const age3 = parseInt(document.getElementById("age-3").value);
-    const error3 = document.getElementById("error-3");
+        const name3 = document.getElementById("name-3").value;
+        const age3 = parseInt(document.getElementById("age-3").value);
+        const error3 = document.getElementById("error-3");
 
-    var youngest, middle, oldest, lesser, equal, greater;
 
-    compareAges.classList.add("hidden");
-    error1.classList.add("hidden");
-    error2.classList.add("hidden");
-    error3.classList.add("hidden");
+        compareAges.classList.add("hidden");
+        error1.classList.add("hidden");
+        error2.classList.add("hidden");
+        error3.classList.add("hidden");
 
-    //"isNaN()" means is not a number
-    if(isNaN(age1)) {
-        error1.classList.remove("hidden");
-        error1.innerHTML="Please enter a number for the age.";
-    }
-    else if(isNaN(age2)) {
-        error2.classList.remove("hidden");
-        error2.innerHTML="Please enter a number for the age.";
-    }
-    else if(isNaN(age3)) {
-        error3.classList.remove("hidden");
-        error3.innerHTML="Please enter a number for the age.";
-    }
+        var youngest, middle, oldest, lesser, equal, greater;
 
-    else{
+        //"isNaN()" means is not a number
+        if(isNaN(age1)) {
+            error1.classList.remove("hidden");
+            error1.innerHTML="Please enter a number for the age.";
+        }
+        else if(isNaN(age2)) {
+            error2.classList.remove("hidden");
+            error2.innerHTML="Please enter a number for the age.";
+        }
+        else if(isNaN(age3)) {
+            error3.classList.remove("hidden");
+            error3.innerHTML="Please enter a number for the age.";
+        }
+
+
+        else{
         //when age1 is the highest numnber
-        if(age1 >= age2 && age1 >= age3) {
-            highest = age1;
-            oldest = name1;
+            if(age1 >= age2 && age1 >= age3)
+            {
+                greater = age1;
+                oldest = name1;
 
-            if(age2 >= age3) {
-                greater = age2;
+                if(age2 >= age3) {
+                equal = age2;
                 less = age3;
                 middle = name2;
                 youngest = name3;
-            }
-            else{
+                }
+
+                else{
                 equal = age3;
                 lesser = age2;
                 middle = name3;
                 youngest = name2;
             }
-        } 
-        //else if age 2 is the largest
-        else if (age2 >= age1 && age2 >= age3)
-        {
-            greater = age2;
-            oldest = name2;
-            if(age1 >= age3) {
-                equal = age1;
-                lesser = age3;
-                middle = name1;
-                youngest = name3;
-            }
-        }
-        //else age 3 is the largest
-        else{
-            greater = age3;
-            oldest = name3;
-            if(age1 >= age2) {
-                equal = age1;
-                lesser = age2;
-                middle = name1;
-                youngest = name2;
+            } 
+            else if (age2 >= age1 && age2 >= age3)
+            {
+                greater = age2;
+                oldest = name2;
+                if(age1 >= age3) {
+                    equal = age1;
+                    lesser = age3;
+                    middle = name1;
+                    youngest = name3;
+                }
             }
             else{
-                equal=age2;
-                lesser=age1;
-                middle=name2;
-                youngest =name1;
+                greater = age3;
+                oldest = name3;
+                if(age1 >= age2) {
+                    equal = age1;
+                    lesser = age2;
+                    middle = name1;
+                    youngest = name2;
+                }
+                else{
+                    equal=age2;
+                    lesser=age1;
+                    middle=name2;
+                    youngest =name1;
+                }
             }
-        }
         comparingAges.classList.remove("hidden");
-        comparingAges.innerHTML = '<section> from oldest to youngest ${eldest} at ${highest} years old, ${middle} at ${median}, and ${youngest} at ${lowest} years old<section>';
+        comparingAges.innerHTML = <p>"from oldest to youngest ${oldest} at ${greater} years old, ${middle} at ${equal}, and ${youngest} at ${lesser} years old"</p>;
     }
 }
+
+    const showExercise2 = () => {
+        document.getElementById("ex-2").classList.toggle("hidden");
+        if(!document.getElementById("ex-1").classList.contains("hidden")){
+            document.getElementById("ex-1").classList.toggle("hidden");
+        }
+    }
+
     //displaying the fundraiser therometer
     const fdrdisplay = () => {
         const fdrPot = parseInt(document.getElementById("fdr").value);
@@ -155,8 +158,8 @@ const comparingAges = () =>{
     //tying in functions
     window.onload = () => {
         document.getElementById("nav-toggle").onclick = toggleNav;
-        document.getElementById("link-1").onclick = showExercise1; //link was not originally working
-        document.getElementById("link-2").onclick = showExercise2; //link was not originally working
+        document.getElementById("link-1").onclick = showExercise1; 
         document.getElementById("compare-ages-button").onclick = comparingAges;
+        document.getElementById("link-2").onclick = showExercise2; 
         document.getElementById("display-button").onclick = fdrdisplay;
     }
