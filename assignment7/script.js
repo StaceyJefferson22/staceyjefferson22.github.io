@@ -19,7 +19,7 @@
         }
     }
 
-        //comparing ages
+    //comparing ages
     const comparingAges = () =>{
         const compareAges = document.getElementById("compare-Ages");
 
@@ -108,8 +108,9 @@
             }
         comparingAges.classList.remove("hidden");
         comparingAges.innerHTML = <p>"from oldest to youngest ${oldest} at ${greater} years old, ${middle} at ${equal}, and ${youngest} at ${lesser} years old"</p>;
+        }
     }
-}
+    
     //displaying the fundraiser therometer
     const fdrdisplay = () => {
         const fdrPot = parseInt(document.getElementById("fdr").value);
