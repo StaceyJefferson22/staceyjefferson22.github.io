@@ -1,4 +1,4 @@
-    //toggling naviagation pane
+   //toggling naviagation pane
     const toggleNav = () => {
     document.getElementById("exercises").classList.toggle("exercise-hide");
     }
