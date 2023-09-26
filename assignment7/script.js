@@ -22,15 +22,15 @@ const showExercise2 = () => {
 const comparingAges = () =>{
     const compareAges = document.getElementById("compare-Ages");
 
-    const name1 = document.getElementById("name-1").ariaValueMax;
+    const name1 = document.getElementById("name-1").value; //had ariaValueMax here by mistake
     const age1 = parseInt(document.getElementById("age-1").value);
     const error1 = document.getElementById("error-1");
 
-    const name2 = document.getElementById("name-2").ariaValueMax;
+    const name2 = document.getElementById("name-2").value;
     const age2 = parseInt(document.getElementById("age-2").value);
     const error2 = document.getElementById("error-2");
 
-    const name3 = document.getElementById("name-3").ariaValueMax;
+    const name3 = document.getElementById("name-3").value;
     const age3 = parseInt(document.getElementById("age-3").value);
     const error3 = document.getElementById("error-3");
 
@@ -41,6 +41,7 @@ const comparingAges = () =>{
     error2.classList.add("hidden");
     error3.classList.add("hidden");
 
+    //"isNaN()" means is not a number
     if(isNaN(age1)) {
         error1.classList.remove("hidden");
         error1.innerHTML="Please enter a number for the age.";
@@ -53,7 +54,9 @@ const comparingAges = () =>{
         error3.classList.remove("hidden");
         error3.innerHTML="Please enter a number for the age.";
     }
+
     else{
+        //when age1 is the highest numnber
         if(age1 >= age2 && age1 >= age3) {
             highest = age1;
             oldest = name1;
@@ -70,7 +73,9 @@ const comparingAges = () =>{
                 middle = name3;
                 youngest = name2;
             }
-        } else if (age2 >= age1 && age2 >= age3)
+        } 
+        //else if age 2 is the largest
+        else if (age2 >= age1 && age2 >= age3)
         {
             greater = age2;
             oldest = name2;
@@ -81,6 +86,7 @@ const comparingAges = () =>{
                 youngest = name3;
             }
         }
+        //else age 3 is the largest
         else{
             greater = age3;
             oldest = name3;
@@ -149,8 +155,8 @@ const comparingAges = () =>{
     //tying in functions
     window.onload = () => {
         document.getElementById("nav-toggle").onclick = toggleNav;
-        document.getElementById("ex-1-link").onclick = showExercise1;
-        document.getElementById("ex-2-link").onclick = showExercise2;
+        document.getElementById("link-1").onclick = showExercise1; //link was not originally working
+        document.getElementById("link-2").onclick = showExercise2; //link was not originally working
         document.getElementById("compare-ages-button").onclick = comparingAges;
         document.getElementById("display-button").onclick = fdrdisplay;
     }
