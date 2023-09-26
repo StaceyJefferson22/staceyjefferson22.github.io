@@ -1,17 +1,25 @@
-//toggling naviagation pane
-const toggleNav = () => {
+    //toggling naviagation pane
+    const toggleNav = () => {
     document.getElementById("exercises").classList.toggle("exercise-hide");
-}
-
-//showing exercises 1
-const showExercise1 = () => {
-    document.getElementById("ex-1").classList.toggle("hidden");
-    if(!document.getElementById("ex-2").classList.contains("hidden")){
-        document.getElementById("ex-2").classList.toggle("hidden");
     }
-}
 
-//comparing ages
+    //showing exercises 1
+    const showExercise1 = () => {
+     document.getElementById("ex-1").classList.toggle("hidden");
+        if(!document.getElementById("ex-2").classList.contains("hidden")){
+        document.getElementById("ex-2").classList.toggle("hidden");
+        }
+    }
+
+
+    const showExercise2 = () => {
+        document.getElementById("ex-2").classList.toggle("hidden");
+        if(!document.getElementById("ex-1").classList.contains("hidden")){
+            document.getElementById("ex-1").classList.toggle("hidden");
+        }
+    }
+
+        //comparing ages
     const comparingAges = () =>{
         const compareAges = document.getElementById("compare-Ages");
 
@@ -102,14 +110,6 @@ const showExercise1 = () => {
         comparingAges.innerHTML = <p>"from oldest to youngest ${oldest} at ${greater} years old, ${middle} at ${equal}, and ${youngest} at ${lesser} years old"</p>;
     }
 }
-
-    const showExercise2 = () => {
-        document.getElementById("ex-2").classList.toggle("hidden");
-        if(!document.getElementById("ex-1").classList.contains("hidden")){
-            document.getElementById("ex-1").classList.toggle("hidden");
-        }
-    }
-
     //displaying the fundraiser therometer
     const fdrdisplay = () => {
         const fdrPot = parseInt(document.getElementById("fdr").value);
@@ -159,7 +159,7 @@ const showExercise1 = () => {
     window.onload = () => {
         document.getElementById("nav-toggle").onclick = toggleNav;
         document.getElementById("link-1").onclick = showExercise1; 
-        document.getElementById("compare-ages-button").onclick = comparingAges;
-        document.getElementById("link-2").onclick = showExercise2; 
+        document.getElementById("link-2").onclick = showExercise2;
+        document.getElementById("compare-ages-button").onclick = comparingAges; 
         document.getElementById("display-button").onclick = fdrdisplay;
     }
