@@ -69,26 +69,26 @@ const compareAge = () => {
 }
 
 const displayFDR = () => {
-    const amount = document.getElementById("total-fdr").value;
+    const input = document.getElementById("total-fdr").value;
     const root = document.querySelector(":root");
 
-    if(amount <= 0 || amount >10000)
+    if(input <= 0 || input >10000)
     {
         root.style.setProperty("--thermometer","0%");
     }
-    else if(amount <=0 && amount >2500)
+    else if(input <=0 && input >2500)
     {
         root.style.setProperty("--thermometer","25%");
     }
-    else if(amount >2500 && amount <= 5000)
+    else if(input >2500 && input <= 5000)
     {
         root.style.setProperty("--thermometer","50%");
     }
-    else if(amount >5000 && amount <=7500)
+    else if(input >5000 && input <=7500)
     {
         root.style.setProperty("--thermometer","75%");
     }
-    else if(amount >7500 && amount <= 1000)
+    else if(input >7500 && input <= 1000)
     {
         root.style.setProperty("--thermometer","100%");
     }
