@@ -29,7 +29,7 @@ const compareAge = () => {
     }
     else if(age1 >122 | age2 >122| age3 >122){
         //The oldest person to ever exist was Jeanne Louise Calment who died at age 122
-        compare.innerHTML = "<strong>*Invalid age. You are not older than Jeanne</strong>";
+        compare.innerHTML = "<strong>*Invalid age. You are not older than Jeanne.</strong>";
     }
     else{
         if(age1 >= age2 && age2 >= age3)
