@@ -72,11 +72,11 @@ const displayFDR = () => {
     const input = document.getElementById("total-fdr").value;
     const root = document.querySelector(":root");
 
-    if(input <= 0 || input >10000)
+    if(input <=0 || input >10000)
     {
         root.style.setProperty("--thermometer","0%");
     }
-    else if(input <=0 && input >2500)
+    else if(input >0 && input <=2500)
     {
         root.style.setProperty("--thermometer","25%");
     }
@@ -88,7 +88,7 @@ const displayFDR = () => {
     {
         root.style.setProperty("--thermometer","75%");
     }
-    else if(input >7500 && input <= 1000)
+    else if(input >7500 && input <= 10000)
     {
         root.style.setProperty("--thermometer","100%");
     }
