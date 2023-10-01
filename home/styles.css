@@ -71,6 +71,7 @@ strong {
 .assignment img{
     height:300px;
     width: 250px;
+    max-width: 90%;
     border: solid black; 
     display: block; 
     margin: auto;

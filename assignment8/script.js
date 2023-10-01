@@ -130,4 +130,3 @@ window.onload = () => {
     document.getElementById("ex2").classList.add("hidden");
     document.getElementById("display-fdr").onclick = displayFDR;
 }
-
