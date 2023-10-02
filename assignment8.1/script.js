@@ -1,25 +1,11 @@
 
+
 //running man
- /*const runningMan = () => {
-    const root = document.querySelector(":root");
-    document.getElementById("man") .src="runningman.png";
+const runningMan = () => {
+    document.getElementById("running-man").classList.add("animate");
+}
 
-    let count = 0;
-    const interval =setInterval = () => { 
-        root.style.setProperty("--man-left-margin", count +"vi");
-        count++;
-
-        if(count == 30) {
-            clearInterval(interval);
-            document.getElementById("man").src="runningman.png";
-        }
-    }
-    
-} */
-
-
-
-//displayFDR
+//displaying fundraising therometer
 const displayFDR = () => {
     const input = document.getElementById("total-fdr").value;
     const root = document.querySelector(":root");
@@ -74,8 +60,8 @@ const displayFDR = () => {
     }
 }
 
-//tying in function with the button
+//tying functions into buttons
 window.onload = () => {
-    document.getElementById("man").onclick =runningMan;
+    document.getElementById("running-man").onclick = runningMan;
     document.getElementById("display-fdr").onclick = displayFDR;
 }

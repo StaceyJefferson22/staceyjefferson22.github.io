@@ -1,0 +1,73 @@
+:root {
+    --thermometer: 0%;
+}
+/* Structure */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+#ex1, 
+#ex2{
+    background-color: royalblue;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*animation */
+.animate{
+    position: relative;
+    animation-name: run;
+    animation-duration: 5s;
+    /*transition: runningman2.jpg;*/
+    animation-iteration-count: infinite;
+}
+
+/*displaying FDR */
+#fdr{
+    padding-left: 15px;
+}
+
+
+/*gradient*/
+#gradient {
+    width: 150px;
+    height: 550px;
+    margin: auto;
+    background: linear-gradient(0deg, red var(--thermometer), white var(--thermometer) 100%);
+}
+
+@keyframes run{
+    0%{
+        top: 0px;
+        left: 0px;
+        animation-duration: 2s;
+    }
+    25%{
+        left: 600px;
+        animation-duration: 2s;
+    }
+    25%{
+        left: 1200px;
+        animation-duration: 2;
+    }
+    25%{
+        left: 775px;
+        animation: 2s;
+    }
+    100%{
+        left: 0px;
+        animation-duration: 2s;
+    }
+}
+
+/*Large Resolution */
+@media only screen and (min-width: 900px){
+    .flex-container{
+        flex: row;
+    }
+}
