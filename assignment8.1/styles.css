@@ -21,10 +21,10 @@ body{
 /*animation */
 .animate{
     position: relative;
-    animation-name: run;
-    animation-duration: 5s;
-    /*transition: runningman2.jpg;*/
-    animation-iteration-count: infinite;
+    /* animation-name: run;
+    animation-duration: 5s; */
+    margin:0 auto;
+    animation: run 8s steps(100) infinite;
 }
 
 /*displaying FDR */
@@ -62,7 +62,7 @@ body{
     100%{
         left: 0px;
         animation-duration: 2s;
-    }
+    } 
 }
 
 /*Large Resolution */
