@@ -13,9 +13,9 @@ body{
     background-color: royalblue;
 }
 
-.flex-container{
+.flex{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 /*animation */

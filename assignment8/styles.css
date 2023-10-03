@@ -5,7 +5,7 @@
 
 .flex-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 body{
@@ -45,10 +45,16 @@ body{
     animation-duration: 3s;
     animation-iteration-count: 1;
 }
+
+/* key frames */
 @keyframes up{
     0%{
         top:0px;
         down: 0px;
+    }
+    50%{
+        down: 50px;
+        animation-duration: 2s;
     }
     100%{
         down: 100px;
@@ -67,12 +73,12 @@ body{
         animation-duration: 2s;
     }
     50%{
-        left: 900px;
-        animation-duration: s;
+        left: 1600px;
+        animation-duration: 2s;
     }
     75%{
         left: 775px;
-        animation: 2s;
+        animation-duration: 2s;
     }
     100%{
         left: 0px;
@@ -82,7 +88,7 @@ body{
 
 /*Large Resolution */
 @media only screen and (min-width: 900px){
-    .flex-container{
+    #flex-container{
         flex: row;
     }
 }
