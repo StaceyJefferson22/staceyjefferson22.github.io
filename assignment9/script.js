@@ -1,4 +1,4 @@
-//Quotes
+//Fading Quotes
 const displayQ = () => {
     const qShown = document.querySelector("#quotes :not(.hide");
     qShown.classList.add("hide");
@@ -10,7 +10,7 @@ const displayQ = () => {
     newQ.classList.remove("hide");
 }
 
-//Rainbow
+//Draw Rainbow
 document.addEventListener("DOMContentLoaded", function(){
     const displayButton = document.getElementById("display-button");
     const showRainbow =document.getElementById("rainbow");
