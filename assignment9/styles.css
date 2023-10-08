@@ -1,0 +1,17 @@
+/* Structure */
+:root{
+    --body-background: black;
+    --main-brackground: royalblue;
+}
+
+body{
+    background-color: black;
+}
+
+#main-content{
+    background-color: var(--main-brackground);
+}
+
+/*Squares and Gradients*/
+
+/*Typography*/

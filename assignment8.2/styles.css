@@ -1,0 +1,72 @@
+:root{
+    --thereometer: 0%;
+    --sliding-left: 0;
+}
+
+/*Structure */
+body {
+    font-family: 'Times New Roman', Times, serif;
+     background-color: black;
+}
+
+h2{
+    text-align: center;
+}
+
+/* Flex-container */
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Running Man*/
+#Box-1{
+    background-color: royalblue;
+}
+#ex-1{
+    background-color: royalblue;
+    width: 35vi;
+    padding: 3.5vi;
+    margin-left: 3vi;
+    margin-top: 15vi;
+    border: none;
+}
+
+#running-man{
+    margin-left: var(--sliding-left);
+}
+
+/* FDR */
+#ex2{
+    background-color: royalblue;
+    padding: 1%;
+    padding-left: 4%;
+}
+
+#fdr-error{
+    color: red;
+}
+
+#gradient{
+    margin-left: 5%;
+    background-color: white;
+    width: 110px;
+    border: 3px solid black;
+}
+
+#gradient.filled-box{
+    background: linear-gradient(to top, red var(--thereometer), var(white) var(--thereometer) 100%);
+}
+
+/* Larger Resolutions */
+@media screen and (min-width: 900px) {
+    .flex-container{
+        flex-direction: row;
+    }
+    #ex1{
+        width: 50vi;
+    }
+    #ex2{
+        width: 50vi;
+    }
+}
