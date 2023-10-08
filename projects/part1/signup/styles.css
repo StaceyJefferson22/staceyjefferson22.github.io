@@ -1,0 +1,80 @@
+:root{
+    --primary: red;
+    --secondary: white;
+}
+
+/* Structure */
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: #E65091;
+}
+
+#main-nav ul{
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+#main-nav li{
+    background: var(--secondary);
+    padding: 10px;
+    margin: 2px 0;
+}
+#main-nav a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* Hamburger Menu */
+#nav-toggle div {
+    width: 35px;
+    height: 5px;
+    background-color: var(--primary);
+    margin: 6px 0;
+}
+
+/*Typography */
+h1{
+    text-align: center;
+}
+#main-nav-items{
+    font-size:1.2em;
+}
+
+.hidden{
+    display: none;
+}
+
+li{
+    list-style-type: none;
+    list-style: none;
+}
+
+#comments{
+    background-color: red;
+}
+
+#comments{
+    color: peachpuff;
+    background-color: blanchedalmond;
+    text-align: left
+}
+
+/*smaller resolution */
+
+@media(min-width: 900px){
+    #main-nav-items{
+        display: flex;
+    }
+    #main-nav-items li{
+        flex:1;
+    }
+    #main-nav-items a{
+        border-bottom: 2px solid transparent
+    }
+    #main-nav-items a:hover{
+        border-bottom: 2px solid var(--primary);
+    }
+    #nav-toggle{
+        display: none;
+    }
+}
