@@ -1,17 +1,71 @@
-/* Structure */
+/*root */
 :root{
-    --body-background: black;
-    --main-brackground: royalblue;
+    --primary: black;
+    --secondary: royalblue;
 }
 
+/*Structure */
 body{
-    background-color: black;
+    background-color: var(--primary);
+    display: flex;
 }
 
-#main-content{
-    background-color: var(--main-brackground);
+/*flex-container */
+.flexbox{
+    font-family: 'Times New Roman', Times, serif;    
+    background-color: var(--secondary);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 2px;
+    flex: 1;
 }
 
-/*Squares and Gradients*/
+/*Typogrpahy */
+h1{
+    text-align: center;
+}
 
-/*Typography*/
+/* Quotes */
+#quotes{
+    padding-left: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+/*Rainbow */
+#display-button{
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.rainbow-fill{
+    width: 40vw;
+    height: 20px;
+    transition: width 1s; 
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#image{
+    display: none;
+    max-width: 50px;
+    position: relative;
+    z-index: 2;
+    padding-left: 728px;
+    top: -40px;
+}
+
+/*Larger Resolution */
+@media only screen and (max-width: 900px){
+    #image{
+        display: none;
+        max-width: 50px;
+        position: relative;
+        z-index: 2;
+        padding-left: 330px;
+    }
+}
