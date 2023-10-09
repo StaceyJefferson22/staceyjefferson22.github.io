@@ -1,3 +1,7 @@
+const toggleNav = () => {
+    document.getElementById("main-nav-items").classList.toggle("hidden");
+}
+
 const singUp = () => {
     const addComment = document.getElementById("comments");
 
@@ -20,6 +24,9 @@ const singUp = () => {
     document.getElementById("comment").value = "";
 }
 
+
+
 window.onload = () => {
+    document.getElementById("nav-toggle").onclick = toggleNav;
     document.getElementById("submit-button").onclick = singUp;
 }

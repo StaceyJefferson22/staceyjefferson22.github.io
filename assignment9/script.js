@@ -44,5 +44,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
 //shows quotes every 2 seconds
 window.onload =() => {
-    setInterval(displayQ, 2000);
+    setInterval(displayQ, 1000);
 }
