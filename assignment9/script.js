@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     setTimeout(() => {
                         pot.style.display = "block";
                         displayButton.disabled = false;
-                    },500);
+                    },1000);
                 }
             }, index * 1000)
         })
@@ -44,5 +44,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
 //shows quotes every 2 seconds
 window.onload =() => {
-    setInterval(displayQ, 1000);
+    setInterval(displayQ, 2000);
 }
