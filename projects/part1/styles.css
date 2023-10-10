@@ -35,6 +35,26 @@ body{
     text-decoration: none;
     color: var(--primary);
 }
+a:link {
+    text-decoration: none;
+    color: brown;
+}
+.boxes{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    text-align: center;
+    width: 27%;
+    padding: 20px;
+    margin: 20px;
+    background: blanchedalmond;
+}
+.box img{
+    max-width: 90%;
+}
+
 
 /* Hamburger Menu */
 #nav-toggle div {
