@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 if(index == color.length - 1){
                     setTimeout(() => {
-                        pot.style.display = "block";
                         displayButton.disabled = false;
+                        pot.style.display = "block";
                     },1000);
                 }
             }, index * 1000)
