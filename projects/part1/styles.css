@@ -9,6 +9,18 @@ body{
     background: #E65091;
 }
 
+#main-footer{
+    margin: auto;
+    width: auto;
+    padding: 5px;
+    background-color: peachpuff;
+    text-align: center;
+}
+
+#main-content{
+    background-color: black;
+}
+
 #main-nav ul{
     padding-left: 0px;
     list-style-type: none;
@@ -36,6 +48,10 @@ body{
 h1{
     text-align: center;
 }
+h2{
+    background-color: coral;
+    text-align: center;
+}
 #main-nav-items{
     font-size:1.2em;
 }
@@ -43,10 +59,42 @@ h1{
 .hidden{
     display: none;
 }
+    label{
+       display: inline-block ;
+       text-align: right;
+    }
+li{
+    list-style-type: none;
+    list-style: none;
+}
 
+
+/* Comment Ids */
+#submit-button{
+    align-content: center;
+}
+#submit {
+    background-color: red;
+}
+#submit h3{
+    color: black;
+    background-color: maroon;
+    text-align: left;
+}
+
+/* flexing */
+.flexr{
+    text-align: center;
+    background-color: maroon;
+}
+.flexw{
+    text-align: center;
+    background-color: white;
+}
 /*smaller resolution */
 
 @media(min-width: 900px){
+    .flex-container,
     #main-nav-items{
         display: flex;
     }
@@ -61,5 +109,11 @@ h1{
     }
     #nav-toggle{
         display: none;
+    }
+    .flex-container{
+        justify-content: space-between;
+    }
+    .col1of2{
+        flex:1;
     }
 }
