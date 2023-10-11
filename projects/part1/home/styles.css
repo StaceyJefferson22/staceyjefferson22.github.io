@@ -18,7 +18,7 @@ body{
 }
 
 #main-content{
-    background-color: black;
+    background-color: #E65091;;
 }
 
 #main-nav ul{
@@ -93,7 +93,18 @@ li{
     list-style-type: none;
     list-style: none;
 }
+/* Input */
+input
+{
+    display: block;
+}
 
+/*label span
+{
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+}*/
 
 /* Comment Ids */
 #submit-button{
