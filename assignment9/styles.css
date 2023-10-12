@@ -43,19 +43,20 @@ h1{
 }
 .rainbow-fill{
     position: relative;
-    height: 20px;
+    height: 25px;
     width: 40vw;
     margin-left: 20px;
     z-index: 1;
     transition: 1s; 
 }
 
+/* image */
 #image{
     display: none;
     position: relative;
-    max-width: 40px;
-    padding-left: 733px;
-    top: -35px;
+    max-width: 60px;
+    padding-left: 713px;
+    top: -55px;
     z-index: 2;
 }
 
@@ -64,8 +65,8 @@ h1{
     #image{
         display: none;
         position: relative;
-        max-width: 40px;
-        padding-left: 335px;
+        max-width: 60px;
+        padding-left: 315px;
         z-index: 2;
     }
 }
