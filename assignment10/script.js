@@ -31,13 +31,13 @@ class Toy {
         //when hovering over the item
         section.onmouseover = () => {
             h3.classList.remove("hide");
-            h3.classList.remove("hide");
+            ul.classList.remove("hide");
             pic.classList.add("hover");
         }
 
         section.onmouseout = () =>{
             h3.classList.add("hide");
-            h3.classList.add("hide");
+            ul.classList.add("hide");
             pic.classList.remove("hover");
         }
         return section;
