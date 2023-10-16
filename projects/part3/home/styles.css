@@ -19,7 +19,7 @@ body{
 }
 
 #main-content{
-    background-color: chocolate;
+    background-color:coral;
 }
 
 
@@ -121,10 +121,19 @@ input
     text-align: left;
 }
 
+#box img{
+    height: 300px;
+    width: 250px;
+}
 /* flexing */
 .flexr{
     text-align: center;
-    background-color: maroon;
+    background-color: #FF2400;
+}
+.flexs{
+    text-align: center;
+    background-color: #FF2400;
+    
 }
 .flexw{
     text-align: center;
