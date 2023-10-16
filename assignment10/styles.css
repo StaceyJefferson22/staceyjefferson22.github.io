@@ -1,5 +1,5 @@
 :root{
-    --primary: royalBlue;
+    --primary: red; 
 }
 
 /*Structure*/
@@ -11,6 +11,14 @@ body{
 h1{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+}
+h3{
+    text-align: center;
+}
+
+ul{
+    top: 30px;
+    text-align: center;
 }
 /*flexbox */
 .flex-container{
@@ -24,7 +32,7 @@ h1{
 }
 
 .hover{
-    opacity: 30%;
+    opacity: 20%;
 }
 
 /*Toys */
@@ -39,10 +47,10 @@ h1{
 .toy h3{ 
     text-align: center;
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
     width: 150px;
     position: absolute;
-    z-index: 5;
+    z-index: 1;
     padding-left:15px;
 }
 
@@ -52,17 +60,17 @@ h1{
     margin-top: 20px;
     width: 200px;
     position: absolute;
-    z-index: 5;
+    z-index: 1;
     padding-left: 10px;
 }
 
 .toy img{
+    width: 250px;
+    height: 300px;
     background-color: black;
     max-width: 90%;
     margin-left: 10px;
     padding: 10px;
-    width: 200px;
-    height: 400px;
 }
 
 
@@ -71,6 +79,12 @@ h1{
     #toy-Box{
         display: flex;
         flex-wrap: wrap;
+    }
+    h3{
+        text-align: center;
+    }
+    ul{
+        text-align: center
     }
     .toy img{
         background-color: peachpuff;
