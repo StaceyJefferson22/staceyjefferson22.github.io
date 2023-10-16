@@ -53,13 +53,15 @@ strong {
 
 /*Navigation */
 
-.assignments{
+.assignments, 
+.projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.assignment{
+.assignment, 
+.project{
     text-align: center;
     width: 27%;
     padding:20px;
@@ -68,7 +70,8 @@ strong {
     
 }
 
-.assignment img{
+.assignment img,
+.project img{
     height:300px;
     width: 250px;
     max-width: 90%;
@@ -77,7 +80,8 @@ strong {
     margin: auto;
 }
 
-.assignment img:hover{
+.assignment img:hover,
+.project img:hover{
     border:solid white;
 }
 
@@ -111,7 +115,7 @@ strong {
 @media screen and (max-width: 900px)
 {
 
-.assignments, .assignment
+.assignments, .assignment, .project
 {
     align-items: center;
     flex-direction: column;

@@ -1,0 +1,39 @@
+:root{
+    --primary: royalblue;
+}
+
+/*Structure*/
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--primary);
+}
+
+h1{
+    text-align: center;
+}
+
+
+/* Flexbox */
+.flex-container{
+    display: block;
+    flex-wrap: wrap;
+}
+
+div{
+    margin: 1%;
+}
+
+/*Images*/
+img{
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    height: 350px;
+}
+
+/*Toy*/
+.Toy{
+    position: relative;
+}
+
+

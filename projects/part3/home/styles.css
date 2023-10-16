@@ -1,0 +1,156 @@
+:root{
+    --primary: red;
+    --secondary: white;
+}
+
+/* Structure */
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: #E65091;
+}
+
+#main-footer{
+    margin: auto;
+    width: auto;
+    padding: 5px;
+    background-color: peachpuff;
+    text-align: center;
+}
+
+#main-content{
+    background-color:chocolate;
+}
+
+#main-nav ul{
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+#main-nav li{
+    background: var(--secondary);
+    padding: 10px;
+    margin: 2px 0;
+    text-align: center;
+}
+#main-nav a{
+    text-decoration: none;
+    color: var(--primary);
+}
+a:link {
+    text-decoration: none;
+    color: brown;
+}
+.boxes{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    text-align: center;
+    width: 27%;
+    padding: 20px;
+    margin: 20px;
+    background: blanchedalmond;
+}
+.box img{
+    max-width: 90%;
+}
+
+
+/* Hamburger Menu */
+#nav-toggle div {
+    width: 35px;
+    height: 5px;
+    background-color: var(--primary);
+    margin: 6px 0;
+}
+
+/*Typography */
+#main-header{
+    background-color: black;
+}
+
+h1{
+    color: red;
+    text-align: center;
+}
+h2{
+    background-color: coral;
+    text-align: center;
+}
+#main-nav-items{
+    font-size:1.2em;
+}
+
+.hidden{
+    display: none;
+}
+    label{
+       display: inline-block ;
+       text-align: right;
+    }
+li{
+    list-style-type: none;
+    list-style: none;
+}
+/* Input */
+input
+{
+    display: block;
+}
+
+/*label span
+{
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+}*/
+
+/* Comment Ids */
+#submit-button{
+    align-content: center;
+}
+#submit {
+    background-color: red;
+}
+#submit h3{
+    color: black;
+    background-color: maroon;
+    text-align: left;
+}
+
+/* flexing */
+.flexr{
+    text-align: center;
+    background-color: maroon;
+}
+.flexw{
+    text-align: center;
+    background-color: white;
+}
+/*smaller resolution */
+
+@media(min-width: 900px){
+    .flex-container,
+    #main-nav-items{
+        display: flex;
+    }
+    #main-nav-items li{
+        flex:1;
+    }
+    #main-nav-items a{
+        border-bottom: 2px solid transparent
+    }
+    #main-nav-items a:hover{
+        border-bottom: 2px solid var(--primary);
+    }
+    #nav-toggle{
+        display: none;
+    }
+    .flex-container{
+        justify-content: space-between;
+    }
+    .col1of2{
+        flex:1;
+    }
+}
