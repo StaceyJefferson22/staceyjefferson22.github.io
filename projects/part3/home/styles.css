@@ -9,6 +9,7 @@ body{
     background: #E65091;
 }
 
+
 #main-footer{
     margin: auto;
     width: auto;
@@ -18,8 +19,9 @@ body{
 }
 
 #main-content{
-    background-color:chocolate;
+    background-color: chocolate;
 }
+
 
 #main-nav ul{
     padding-left: 0px;
