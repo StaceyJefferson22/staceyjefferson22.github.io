@@ -87,12 +87,12 @@ ul{
         text-align: center
     }
     .toy img{
-        background-color: peachpuff;
+        width: 75%;
+        height: 350px;
+        background-color: black;
         max-width: 90%;
         margin-left: 5%;
         padding: 5%;
-        width: 75%;
-        height: 350px;
     }
     .flex-container{
         display: flex;

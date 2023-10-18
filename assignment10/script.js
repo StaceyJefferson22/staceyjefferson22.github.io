@@ -10,8 +10,8 @@ class Toy {
 
 //get items parameters
     get item(){
-        const section = document.createElement("section");
-        section.classList.add("toy");
+        const div = document.createElement("div");
+        div.classList.add("toy");
         const h3 = document.createElement("h3");
         h3.classList.add("hide");
         h3.innerHTML = this.name;
@@ -21,26 +21,26 @@ class Toy {
         ul.append(this.itemList("Age Range: " +this.ageRange));
         ul.append(this.itemList("Price: " +this.price));
         ul.append(this.itemList("Rating: " +this.rating+ " stars"));
-        section.append(h3);
-        section.append(ul);
+        div.append(h3);
+        div.append(ul);
 
         const pic = document.createElement("img");
-        section.append(pic);
+        div.append(pic);
         pic.src = "images/" + this.pic;
 
         //when hovering over the item
-        section.onmouseover = () => {
+        div.onmouseover = () => {
             h3.classList.remove("hide");
             ul.classList.remove("hide");
             pic.classList.add("hover");
         }
 
-        section.onmouseout = () =>{
+        div.onmouseout = () =>{
             h3.classList.add("hide");
             ul.classList.add("hide");
             pic.classList.remove("hover");
         }
-        return section;
+        return div;
     }
     itemList(details){
         const li = document.createElement("li");
