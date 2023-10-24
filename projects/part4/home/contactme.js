@@ -1,15 +1,15 @@
-const showEmailResult = async (e) => {
+const displayEmail = async (e) => {
     e.preventDefault();
-    const result = document.getElementById("result");
-    let response = await getEmailResult();
-    if(response.status == 200) {
-        result.innerHTML = "Email Successfully Sent";
+    const aftermath = document.getElementById("aftermath");
+    let feedback = await retrieveEmail();
+    if(feedback.status == 200) {
+        aftermath.innerHTML = "Email was successfully sent. We will respond to you in one to two business days.";
     } else {
-        result.innerHTML = "Sorry, your email was not sent.";
+        aftermath.innerHTML = "Sorry, your email was not received. Try Again!";
     }
 };
 
-const getEmailResult = async (e) => {
+const retrieveEmail = async (e) => {
     const form = document.getElementById("contact-form");
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
@@ -18,7 +18,7 @@ const getEmailResult = async (e) => {
     result.innerHTML = "Please wait...";
 
     try {
-        const response = await fetch("https://api.web3forms.com/submit", {
+        const feedback = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
@@ -26,12 +26,12 @@ const getEmailResult = async (e) => {
             },
             body: json,
         });
-        return response;
+        return feedback;
     } catch (error) {
         console.log(error);
         document.getElementById("result").innerHTML =
-            "Sorry your email couldn't be sent";
+            "Error Detected! Email was not sent. Please try again!";
     }
 };
 
-document.getElementById("contact-form").onsubmit = showEmailResult;
+document.getElementById("contact-form").onsubmit = displayEmail;
