@@ -42,5 +42,5 @@ function filterFunction() {
 
 window.onload = () =>{
     document.getElementById("nav-toggle").onclick = toggleNav;
-    document.getElementById("submit-button").onclick = signup;
+    //document.getElementById("submit-button").onclick = signup;
 }

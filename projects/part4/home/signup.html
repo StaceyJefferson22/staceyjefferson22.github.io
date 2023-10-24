@@ -40,51 +40,54 @@
                 one of our other sign-up options."
                 "NO HIDDEN FEES, NO MINIMUMs, NO KIDDING!"
             </p>
-            <form id="form-signup" action="https://api.web3forms.com/submit" method="POST">
+            <form 
+            id="form-signup" 
+            action="https://api.web3forms.com/submit" 
+            method="POST">
                 
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="access_key" value="07aeabf8-f039-48b6-bebf-2c35618cc6c9">
            
             <p>
                 <label for="name">Name:</label>
-                <input type="input" id="name" class="output" required />
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="first and last"
+                    name="name"
+                    required
+                />
             </p>
             <p>
-                <label for="email">  Email:</label>
-                <input type="input" id="email" class="output" required />
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required />
             </p>
             <p>
-                <label for="pn">Phone Number:</label>
-                <input type="input" id="pn" class="output" required />
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
             </p>
-            <p>
-                <label for="comment">Comment:</label>
-                <input type="input" id="comment" class="output">
-            </p>
-            <input
-            type="hidden"
-            name="redirect"
-            value="https://web3forms.com/success"
-            />
             <input
                 type="hidden"
-                name="subject"
-                value="A new team member"
+                name="redirect"
+                value="https://web3forms.com/success"
             />
-            <input type="hidden" name="from_name" value="My Website" />
-
+            <input 
+                type="hidden"
+                name="subject"
+                value="Contact from AVON Website"
+            />
             <p>
-            <button id="submit-button">Submit</button>
+                <button type="submit">Submit Form</button>
             </p>
-          
-            <p id="result"></p>
+            <p id ="result"></p>
+
             </form>
             <iframe
                 id="google-map"
-                src="https://www.google.com/maps/place/111+Trade+Rd,+Cheraw,+SC+29520/@34.7008223,-79.9480261,17z/data=!3m1!4b1!4m6!3m5!1s0x8855049a109a72e7:0xf2f9f1f5236e3dbc!8m2!3d34.7008223!4d-79.9480261!16s%2Fg%2F11hf6zmzml?entry=ttu"
-                allowfullscreen=""
-                loading="blah"
-                referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.172758873931!2d-79.94802609999999!3d34.7008223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8855049a109a72e7%3A0xf2f9f1f5236e3dbc!2s111%20Trade%20Rd%2C%20Cheraw%2C%20SC%2029520!5e0!3m2!1sen!2sus!4v1698121848151!5m2!1sen!2sus" 
+                width="270" height="200" style="border: 1px;;" 
+                allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
             <script src="contactme.js"></script>
             <script src="form.js"></script>
         </main>
