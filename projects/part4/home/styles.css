@@ -3,11 +3,6 @@
     --secondary: white;
 }
 /*sign up */
-form{
-    text-align: left;
-}
-
-
 
 form input,
 form button,
@@ -107,10 +102,10 @@ a:link {
 .boxes{
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
 }
 .box{
-    text-align: center;
+    text-align: left;
     width: 27%;
     padding: 20px;
     margin: 20px;
@@ -200,16 +195,19 @@ label span
 }
 /* flexing */
 .flexr{
-    text-align: center;
+    text-align: left;
+    padding: 20px;
     background-color: #FF2400;
 }
 .flexs{
-    text-align: center;
+    text-align: left;
+    padding: 20px;
     background-color: #FF2400;
     
 }
 .flexw{
-    text-align: center;
+    text-align: left;
+    padding: 20px;
     background-color: white;
 }
 
