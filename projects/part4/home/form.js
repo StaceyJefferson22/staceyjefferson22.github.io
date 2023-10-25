@@ -4,13 +4,13 @@ const submitOrder = (e) => {
 
     const form = document.getElementById("form-order");
     const ordName = form.elements["order-name"].value;
-    const demeanor = form.elements["demeanor"].value;
-    const termsChecked = form.elements["terms"].checked;
+    const options = form.elements["options"].value;
+    const conditions = form.elements["terms"].checked;
 
     console.log(ordName);
     console.log(getRValue("size"));
-    console.log(demeanor);
-    console.log(termsChecked);
+    console.log(options);
+    console.log(conditions);
 };
 
 const getRValue = (rName) => {
