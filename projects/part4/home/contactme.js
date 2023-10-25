@@ -14,7 +14,7 @@ const retrieveEmail = async (e) => {
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-    const result = document.getElementById("result");
+    const result = document.getElementById("aftermath");
     result.innerHTML = "Please wait...";
 
     try {
@@ -29,7 +29,7 @@ const retrieveEmail = async (e) => {
         return feedback;
     } catch (error) {
         console.log(error);
-        document.getElementById("result").innerHTML =
+        document.getElementById("aftermath").innerHTML =
             "Error Detected! Email was not sent. Please try again!";
     }
 };
