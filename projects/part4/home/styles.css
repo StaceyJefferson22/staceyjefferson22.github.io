@@ -165,7 +165,11 @@ input
 label{
     display: inline-block;
 }
-
+form label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    display: block;
+}
 label span
 {
     display: inline-block;
