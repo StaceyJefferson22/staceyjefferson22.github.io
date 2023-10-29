@@ -1,0 +1,42 @@
+/*root*/ 
+.root{
+    --primary: lightblue;
+    --secondary: darkblue;
+}
+/*Structure */
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--primary);
+}
+
+section{
+    background-color: darkblue;
+    margin: 1%;
+    padding: 1%;
+}
+
+/* Image */
+img{
+    transition: transform 0.2s;
+    border: 5px darkblue solid;
+}
+
+img:hover{
+    transform:  scale(1.5);
+}
+
+span{
+    margin-left: 2%;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Smaller Resolution */
+@media screen and (min-width: 600px){
+    .flexbox {
+        flex-direction: row;
+    }
+}
