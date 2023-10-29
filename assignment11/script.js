@@ -24,31 +24,36 @@ const showMovies = async () =>{
 //constructor was gteMovieItem and not getMovieItem. 
 //developer tool was helpful in solving the problem.
 const getMovieItem = (movie) => {
-    let section = document.createElement("section");
-    let span = document.createElement("span");
+    const movieSection = document.createElement("section");
+    const span = document.createElement("span");
     const URL = "https://portiaportia.github.io/json/";
 
-    let img = document.createElement("img");
+    const img = document.createElement("img");
     img.src = URL + movie.img;
-    section.append(img);
+    movieSection.append(img);
 
-    let h3 = document.createElement("h3");//had img instead of h3
-    h3.innerText = movie.title;
-    span.append(h3);
-    section.append(span);
+    const h2 = document.createElement("h2");//had img instead of h3
+    h2.innerText = movie.title;
+    span.append(h2);
+    movieSection.append(span);
 
     //Something is wrong with p. It is only showing ${movie.whatever}
-    let p = document.createElement("p");
+    const p = document.createElement("p");
     span.append(p);
-    p.innerHTML = '<b>Director: </b>${movies.director}';
-    p.innerHTML += '<br><b> Actors: </b>${movies.actors}';
-    p.innerHTML += '<br><b>Year: </b> ${movies.year}';
-    p.innerHTML += '<br><b>Genres: </b> ${movies.genres}';
-    p.innerHTML += '<br><b>Description: </b>${movies.description}';
-    section.append(span);
+    p.innerHTML = "<strong>Director: </strong>"
+    p.innerHTML += movie.director;
+    p.innerHTML += "<br><strong>Actors: </strong>"
+    p.innerHTML += movie.actors;
+    p.innerHTML += "<br><strong>Year Released: </strong>"
+    p.innerHTML += movie.year;
+    p.innerHTML += "<br><strong>Genres: </strong>"
+    p.innerHTML += movie.genres;
+    p.innerHTML += "<br>"
+    p.innerHTML += movie.description;
+    movieSection.append(span);
 
-    section.classList.add("flexbox");
-    return section;
+    movieSection.classList.add("flexbox");
+    return movieSection;
 };
 
 window.onload = () => showMovies();

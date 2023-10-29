@@ -1,19 +1,25 @@
-/*root*/ 
-.root{
-    --primary: lightblue;
-    --secondary: darkblue;
-}
+
 /*Structure */
 body{
+    background-color: #E63305;
     font-family: 'Times New Roman', Times, serif;
-    background-color: lightblue;
 }
 
 section{
-    background-color: darkblue;
     margin: 1%;
     padding: 1%;
+    background-color: #E60E05;
 }
+
+/*Typography*/
+h1{
+    margin-left: 24px;
+}
+
+p{
+    line-height: 2em;
+}
+ 
 
 /* flex-container */
 .flexbox{
@@ -24,24 +30,28 @@ section{
 
 /* Image */
 img{
-    transition: transform 0.2s;
-    border: 5px darkblue solid;
-    height: 250px;
-    width: 250px;
+    transition: transform 0.1s;
+    height: 175px;
+    width: 175px;
+    border: 5px maroon solid;
 }
 
 img:hover{
-    transform:  scale(1.25);
+    transform:  scale(1.90);
 }
 
 span{
-    margin-left: 2%;
+    margin-left: 3%;
 }
 
 
 /* Smaller Resolution */
 @media screen and (min-width: 600px){
+    h1{
+        margin-left: 15px;
+    }
     .flexbox {
         flex-direction: row;
     }
+
 } 
