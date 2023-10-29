@@ -6,7 +6,7 @@
 /*Structure */
 body{
     font-family: 'Times New Roman', Times, serif;
-    background-color: var(--primary);
+    background-color: lightblue;
 }
 
 section{
@@ -15,28 +15,33 @@ section{
     padding: 1%;
 }
 
+/* flex-container */
+.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* Image */
 img{
     transition: transform 0.2s;
     border: 5px darkblue solid;
+    height: 250px;
+    width: 250px;
 }
 
 img:hover{
-    transform:  scale(1.5);
+    transform:  scale(1.25);
 }
 
 span{
     margin-left: 2%;
 }
 
-.flexbox{
-    display: flex;
-    flex-direction: column;
-}
 
 /* Smaller Resolution */
 @media screen and (min-width: 600px){
     .flexbox {
         flex-direction: row;
     }
-}
+} 
