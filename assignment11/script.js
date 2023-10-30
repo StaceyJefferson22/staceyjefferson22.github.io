@@ -26,10 +26,10 @@ const showMovies = async () =>{
 const getMovieItem = (movie) => {
     const movieSection = document.createElement("section");
     const span = document.createElement("span");
-    const URL = "https://portiaportia.github.io/json/";
+    const link = "https://portiaportia.github.io/json/";
 
     const img = document.createElement("img");
-    img.src = URL + movie.img;
+    img.src = link + movie.img;
     movieSection.append(img);
 
     const h2 = document.createElement("h2");//had img instead of h3
