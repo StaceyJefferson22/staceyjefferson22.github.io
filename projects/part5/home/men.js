@@ -22,7 +22,7 @@ const showProducts = async () =>{
 const getProductItem = (product) => {
     const section = document.createElement("section");
     const span = document.createElement("span");
-    const URL = "https://staceyjefferson22.github.io/json/images/";
+    const URL = "https://staceyjefferson22.github.io/json/";
 
     const img = document.createElement("img");
     img.src = URL + product.img;
