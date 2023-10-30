@@ -4,41 +4,41 @@
         "price": "$24.99",
         "type": "Body",
         "description": "Here’s your best friend for exfoliating dead skin cells so that your skin looks brighter and more even toned.-AVON",
-        "img": "../../../screenshot/pad.jpg"
+        "img": "images/pad.jpg"
     },
     {
         "name": "Skin So Soft Original Body Lotion",
         "price": "$ 7.69",
         "type": "Body",
         "description": "Get skin softer than ever with Skin So Soft Original Body Lotion. -AVON",
-        "img": "screenshot/lotion.jpg"
+        "img": "images/lotion.jpg"
     },
     {
         "name": "Men's Earth and Sky Bracelet",
         "price": "$16.99",
         "type": "Jewelry",
         "description": "The focal point of this beaded bracelet is the genuine sodalite and tiger’s eye stones in a naturally charming earth tone palette. -AVON",
-        "img": ""
+        "img": "images/bracelet.jpg"
     },
     {
         "name": "Mesmrize Cologne Spray",
         "price": "$18.99",
         "type": "Fragrance",
         "description": "Reveal your mysterious side with this captivating men’s fragrance that features a hypnotic blend of warm and intoxicating notes. 3.4 fl. oz. - AVON",
-        "img": "screenshot/mesmerizeS.jpg"
+        "img": "images/mesmerizeS.jpg"
     },
     {
         "name": "Wild Country Aftershave Splash",
         "price": "$10.49",
         "type": "Grooming",
         "description": "Make a splash with an aftershave in our best-selling scent. It leaves skin feeling smooth after shaving and lightly fragranced with the woody, earthy scent of Wild Country. 4 fl. oz. - AVON",
-        "img": "screenshot/as.jpg"
+        "img": "images/as.jpg"
     },
     {
         "name": "Black Suede Roll-On Antiperspriant Deodorant",
         "price": "$2.69",
         "type": "Grooming",
         "description": "The fresh and aromatic fusion of notes in Black Suede make it always a classic. The fragranced antiperspirant is non-whitening, quick drying and anti-staining as it glides on smoothly for long-lasting odor protection. - AVON",
-        "img": "screenshot/bs.jpg"
+        "img": "images/bs.jpg"
     }
 ]

@@ -22,15 +22,15 @@ const showProducts = async () =>{
 const getProductItem = (product) => {
     const section = document.createElement("section");
     const span = document.createElement("span");
-    const URL = "https://staceyjefferson22.github.io/json/";
+    const URL = "https://staceyjefferson22.github.io/json/images/";
 
     const img = document.createElement("img");
     img.src = URL + product.img;
     section.append(img);
 
-    const h2 = document.createElement("h2");//had img instead of h3
-    h2.innerText = product.name;
-    span.append(h2);
+    const h3= document.createElement("h3");//had img instead of h3
+    h3.innerText = product.name;
+    span.append(h3);
     section.append(span);
 
     const p = document.createElement("p");
@@ -38,9 +38,9 @@ const getProductItem = (product) => {
     p.innerHTML = "<strong>Price: </strong>"
     p.innerHTML += product.price;
     p.innerHTML += "<br><strong>Type: </strong>"
-    p.innerHTML += product.price;
+    p.innerHTML += product.type;
     p.innerHTML += "<br><strong>Description: </strong>"
-    p.innerHTML += product.price;
+    p.innerHTML += product.description;
     section.append(span);
 
     section.classList.add("flexbox");
