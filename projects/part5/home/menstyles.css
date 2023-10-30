@@ -42,10 +42,3 @@ span{
     margin-left: 3%;
 }
 
-/* Smaller resolution */
-@media screen and (min-width: 600px){
-    .flexbox{
-        flex-direction: row;
-    }
-}
-
