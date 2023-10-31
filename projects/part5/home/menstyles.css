@@ -14,7 +14,9 @@ section{
 h1{
     margin-left: 24px;
 }
-
+h3{
+    text-align: center;
+}
 p{
     line-height: 2em;
 }
