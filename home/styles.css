@@ -29,7 +29,8 @@ a:link {
 }
 
 p a{
-    color: red
+    color: red;
+    font-size: larger;
 }
 
 p a:hover{
