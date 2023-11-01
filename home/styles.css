@@ -28,7 +28,13 @@ a:link {
     color: green;
 }
 
+p a{
+    color: red
+}
 
+p a:hover{
+    color:blueviolet;
+}
 /*Typography */
 
 h1{
