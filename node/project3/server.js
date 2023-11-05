@@ -20,7 +20,7 @@ app.get("/api/nintendos", (req, res) => {
                 "Boot",
                 "Magic Leaf",
             ],
-        img: "project3/images/mario.jpg"
+        img: "images/mario.png"
     };
     nintendos[1] = {
         name: "Link",
@@ -92,6 +92,6 @@ app.get("/api/nintendos", (req, res) => {
     res.json(nintendos);
 });
 
-app.listen(4000, () => {
+app.listen(5000, () => {
     console.log("I am Listening");
 });

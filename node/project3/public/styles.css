@@ -1,7 +1,18 @@
-h1{
-    color:red;
+body{
+    background-color: red;
 }
 
+
+
+h1{
+    text-align: center;
+}
+section{
+    display: inline-block;
+    margin: 50px;
+    text-align: center;
+    background-color: salmon;
+}
 img{
     height: 300px;
     width: 300px;
