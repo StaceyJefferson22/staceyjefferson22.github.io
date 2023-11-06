@@ -2,18 +2,23 @@ body{
     background-color: red;
 }
 
-
-
 h1{
+    text-align: center;
+}
+h3{
     text-align: center;
 }
 section{
     display: inline-block;
+    width: 330px;
+    height: 500px;
     margin: 50px;
-    text-align: center;
     background-color: salmon;
 }
+
 img{
-    height: 300px;
-    width: 300px;
+    max-width: 90%;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
 }
