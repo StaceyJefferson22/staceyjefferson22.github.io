@@ -122,7 +122,6 @@ const updateAthlete = async (req,res) => {
 
 app.delete("/api/athletes/:id", upload.single("img"), (req,res) =>{
     removeAthletes(res, req.params.id);
-    console.log("Athlete has been deleted.");
 });
 
 const removeAthletes = async(res, id) => {

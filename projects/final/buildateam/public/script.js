@@ -148,7 +148,7 @@ const populateEditForm = (athlete) => {
     form.sport.value = athlete.sport;
     form.name.value = athlete.name;
     form.description.value = athlete.description;
-    populateAward(athlete)
+    populateAward(athlete);
 };
 
 const populateAward = (athlete) => {
@@ -159,8 +159,8 @@ const populateAward = (athlete) => {
         input.type = "text";
         input.value = award;
         section.append(input);
-    })
-}
+    });
+};
 
 const addEditAthlete = async(e) => {
     e.preventDefault();
@@ -171,8 +171,8 @@ const addEditAthlete = async(e) => {
 
     if (form._id.value == -1) {
         formData.delete("_id");
-        console.log("Showing in add");
-        console.log(...formData);
+        //console.log("Showing in add");
+        //console.log(...formData);
 
         response = await fetch("/api/athletes", {
             method: "POST",
@@ -186,7 +186,7 @@ const addEditAthlete = async(e) => {
 
         response = await fetch(`/api/athletes/${form._id.value}`, {
             method: "PUT",
-            body: formData,
+            body: formData
         });
     }
 
@@ -210,7 +210,7 @@ const addEditAthlete = async(e) => {
 const getAwards = () => {
     const inputs = document.querySelectorAll("#award-boxes input");
     let awards = [];
-    console.log("getAwards()");
+    //console.log("getAwards()");
 
     inputs.forEach((input) => {
         console.log("INPUT" + input.value);
