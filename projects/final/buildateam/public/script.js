@@ -40,69 +40,69 @@ function filterFunction() {
     }
 }
 
-const getAthletes = async() => {
+const getMembers = async() => {
     try{
-        return(await fetch("api/athletes/")).json();
+        return(await fetch("api/members/")).json();
     } catch (error) {
         console.log(error);
     }
 };
 
-const showAthletes = async() => {
-    let athletes = await getAthletes();
-    let athletesDiv = document.getElementById("athlete-list");
-    athletesDiv.innerHTML = "";
-    athletes.forEach((athlete) => {
+const showMembers = async() => {
+    let members = await getMembers();
+    let membersDiv = document.getElementById("member-list");
+    membersDiv.innerHTML = "";
+    members.forEach((member) => {
         const section = document.createElement("section");
-        section.classList.add("athlete");
-        athletesDiv.append(section);
+        section.classList.add("member");
+        membersDiv.append(section);
 
         const a = document.createElement("a");
         a.href = "#";
         section.append(a);
 
         const h3 = document.createElement("h3");
-        h3.innerHTML = athlete.name;
+        h3.innerHTML = member.name;
         a.append(h3);
 
         const img = document.createElement("img");
-        img.src = athlete.img;
+        img.src = member.img;
         section.append(img);
 
         a.onclick = (e) => {
             e.preventDefault();
-            displayDetails(athlete);
+            displayDetails(member);
         };
     });
 };
 
-const displayDetails = (athlete) => {
-    const athleteDetails = document.getElementById("athlete-details");
-    athleteDetails.innerHTML = "";
+const displayDetails = (member) => {
+    const memberDetails = document.getElementById("member-details");
+    memberDetails.innerHTML = "";
 
     const h3 = document.createElement("h3");
-    h3.innerHTML = athlete.name;
-    athleteDetails.append(h3);
+    h3.innerHTML = member.name;
+    memberDetails.append(h3);
 
     const dLink = document.createElement("a");
     dLink.innerHTML = " &#x2715;";
-    athleteDetails.append(dLink);
+    memberDetails.append(dLink);
     dLink.id = "delete-link";
 
     const eLink = document.createElement("a");
     eLink.innerHTML = "&#9998;";
-    athleteDetails.append(eLink);
+    memberDetails.append(eLink);
     eLink.id = "edit-link";
 
     const p = document.createElement("p");
-    athleteDetails.append(p);
-    p.innerHTML = "Sport: " + athlete.sport;
-    p.innerHTML += "<br>Description: " + athlete.description;
+    memberDetails.append(p);
+    p.innerHTML = "Phone Number: " + member.phone;
+    p.innerHTML += "<br>Description: " + member.description;
 
     const ul = document.createElement("ul");
-    athleteDetails.append(ul);
-    console.log(athlete.awards);
-    athlete.awards.forEach((award) => {
+    memberDetails.append(ul);
+    console.log(member.awards);
+    member.awards.forEach((award) => {
         const li = document.createElement("li");
         ul.append(li);
         li.innerHTML = award;
@@ -112,19 +112,19 @@ const displayDetails = (athlete) => {
     eLink.onclick = (e) => {
         e.preventDefault();
         document.querySelector(".dialog").classList.remove("transparent");
-        document.getElementById("add-edit-title").innerHTML = "Edit Athlete";
+        document.getElementById("add-edit-title").innerHTML = "Edit Member";
     };
 
     dLink.onclick = (e) => {
         e.preventDefault();
-        deleteAthlete(athlete);
+        deleteMember(member);
     };
 
-    populateEditForm(athlete);
+    populateEditForm(member);
 };
 
-const deleteAthlete = async(athlete) => {
-    let response = await fetch(`/api/athletes/${athlete._id} `, {
+const deleteMember = async(member) => {
+    let response = await fetch(`/api/members/${member._id} `, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json;charset=utf-8"
@@ -137,24 +137,24 @@ const deleteAthlete = async(athlete) => {
     }
 
     let result = await response.json();
-    showAthletes();
-    document.getElementById("athlete-details").innerHTML = "";
+    showMembers();
+    document.getElementById("member-details").innerHTML = "";
     resetForm();
 }
 
-const populateEditForm = (athlete) => {
-    const form = document.getElementById("add-edit-athlete-form");
-    form._id.value = athlete._id;
-    form.sport.value = athlete.sport;
-    form.name.value = athlete.name;
-    form.description.value = athlete.description;
-    populateAward(athlete);
+const populateEditForm = (member) => {
+    const form = document.getElementById("add-edit-member-form");
+    form._id.value = member._id;
+    form.phone.value = member.phone._id;
+    form.name.value = member.name;
+    form.description.value = member.description;
+    populateAward(member);
 };
 
-const populateAward = (athlete) => {
+const populateAward = (member) => {
     const section = document.getElementById("award-boxes");
 
-    athlete.awards.forEach((award) => {
+    member.awards.forEach((award) => {
         const input = document.createElement("input");
         input.type = "text";
         input.value = award;
@@ -162,9 +162,9 @@ const populateAward = (athlete) => {
     });
 };
 
-const addEditAthlete = async(e) => {
+const addEditMember = async(e) => {
     e.preventDefault();
-    const form = document.getElementById("add-edit-athlete-form");
+    const form = document.getElementById("add-edit-member-form");
     const formData = new FormData(form);
     let response;
     formData.append("awards", getAwards());
@@ -174,7 +174,7 @@ const addEditAthlete = async(e) => {
         //console.log("Showing in add");
         //console.log(...formData);
 
-        response = await fetch("/api/athletes", {
+        response = await fetch("/api/members", {
             method: "POST",
             body: formData,
         });
@@ -184,7 +184,7 @@ const addEditAthlete = async(e) => {
 
         console.log(...formData);
 
-        response = await fetch(`/api/athletes/${form._id.value}`, {
+        response = await fetch(`/api/members/${form._id.value}`, {
             method: "PUT",
             body: formData
         });
@@ -196,15 +196,15 @@ const addEditAthlete = async(e) => {
     }
 
     //response 
-    athlete = await response.json();
+    member = await response.json();
 
     if(form._id.value != -1) {
-        displayDetails(athlete);
+        displayDetails(member);
     }
 
     resetForm();
     document.querySelector(".dialog").classList.add("transparent");
-    showAthletes();
+    showMembers();
 };
 
 const getAwards = () => {
@@ -221,7 +221,7 @@ const getAwards = () => {
 }
 
 const resetForm = () => {
-    const form = document.getElementById("add-edit-athlete-form");
+    const form = document.getElementById("add-edit-member-form");
     form.reset();
     form._id = "-1";
     document.getElementById("award-boxes").innerHTML = "";
@@ -230,7 +230,7 @@ const resetForm = () => {
 const showHideAdd = (e) => {
     e.preventDefault();
     document.querySelector(".dialog").classList.remove("transparent");
-    document.getElementById("add-edit-title").innerHTML = "Add Athlete";
+    document.getElementById("add-edit-title").innerHTML = "Add Member";
     resetForm();
 };
 
@@ -245,8 +245,8 @@ const addAward = (e) => {
 window.onload = () =>{
     document.getElementById("nav-toggle").onclick = toggleNav;
     //document.getElementById("submit-button").onclick = signup;
-    showAthletes();
-    document.getElementById("add-edit-athlete-form").onsubmit = addEditAthlete;
+    showMembers();
+    document.getElementById("add-edit-member-form").onsubmit = addEditMember;
     document.getElementById("add-link").onclick = showHideAdd;
 
     document.querySelector(".close").onclick = () => {

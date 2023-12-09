@@ -3,6 +3,7 @@ const app = express();
 const Joi = require("joi");
 const multer = require("multer");
 app.use(express.static("public"));
+app.use(express.static("https://staceyjefferson22.github.io/projects/final/"));
 app.use(express.json());
 const cors = require("cors");
 app.use(cors());
@@ -22,77 +23,77 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
-const athleteSchema = new mongoose.Schema({
+const memberSchema = new mongoose.Schema({
     /* _id: mongoose.SchemaTypes.ObjectId, */
     name:String,
-    sport: String,
+    phone: String,
     description: String,
     awards: [String],
     img: String,
 });
 
-const Athlete = mongoose.model("Athlete", athleteSchema);
+const Member = mongoose.model("Member", memberSchema);
 
-app.get("/api/athletes", (req,res) => {
-    getAthletes(res);
+app.get("/api/members", (req,res) => {
+    getMembers(res);
 });
 
-const getAthletes = async (res) => {
-    const athletes = await Athlete.find();
-    res.send(athletes);
+const getMembers = async (res) => {
+    const members = await Member.find();
+    res.send(members);
 };
 
-app.get("/api/athletes", (req, res) => {
-    res.send(athletes);
+app.get("/api/members", (req, res) => {
+    res.send(members);
 });
 
-app.get("api/athletes/:id", (req, res) => {
+app.get("api/members/:id", (req, res) => {
     const id = parseInt(req.params.id);
 
-    const athlete = athletes.find((r) => r._id === id);
+    const member = members.find((r) => r._id === id);
 
-    if(!athlete){
-        res.status(404).send("The athlete with the given id was not found");
+    if(!member){
+        res.status(404).send("The member with the given id was not found");
     }
 
-    res.send(athletes);
+    res.send(members);
 });
 
-const getAthlete = async(res) => {
-    const athlete = await Athlete.findOne({_id:id});
-    res.send(athlete);
+const getMember = async(res) => {
+    const member = await Member.findOne({_id:id});
+    res.send(member);
 };
 
-app.post("/api/athletes", upload.single("img"), (req, res) => {
-    const result = validateAthlete(req.body);
+app.post("/api/members", upload.single("img"), (req, res) => {
+    const result = validateMember(req.body);
     console.log(result);
     if (result.error) {
         res.status(400).send(result.error.details[0].message);
         return;
     }
 
-    const athlete = new Athlete({
+    const member = new Member({
         name: req.body.name,
-        sport: req.body.sport,
+        phone: req.body.phone,
         description: req.body.description,
         awards: req.body.awards.split(",")
     })
 
 
     if(req.file) {
-        athlete.img = "images/" + req.file.filename;
+        member.img = "images/" + req.file.filename;
     }
 
-    createAthlete(athlete, res);
+    createMember(member, res);
 });
 
-const createAthlete = async (athlete, res) => {
-    const result = await athlete.save();
-    res.send(athlete);
+const createMember = async (member, res) => {
+    const result = await member.save();
+    res.send(member);
 };
 
-app.put("/api/athletes/:id", upload.single("img"), (req, res) => {
-    const result = validateAthlete(req.body);
+app.put("/api/members/:id", upload.single("img"), (req, res) => {
+    const result = validateMember(req.body);
     console.log(result);
 
     if(result.error) {
@@ -100,13 +101,13 @@ app.put("/api/athletes/:id", upload.single("img"), (req, res) => {
         return;
     }
 
-    updateAthlete(req,res);
+    updateMember(req,res);
 });
 
-const updateAthlete = async (req,res) => {
+const updateMember = async (req,res) => {
     let fieldsToUpdate ={
         name: req.body.name,
-        sport: req.body.sport,
+        phone: req.body.phone,
         description: req.body.description,
         awards: req.body.awards.split(","),
     };
@@ -115,28 +116,28 @@ const updateAthlete = async (req,res) => {
         fieldsToUpdate.img = "images/" + req.file.filename;
     }
 
-    const result = await Athlete.updateOne({_id:req.params.id }, fieldsToUpdate);
-    const athlete = await Athlete.findById(req.params.id);
-    res.send(athlete);
+    const result = await Member.updateOne({_id:req.params.id }, fieldsToUpdate);
+    const member = await Member.findById(req.params.id);
+    res.send(member);
 };
 
-app.delete("/api/athletes/:id", upload.single("img"), (req,res) =>{
-    removeAthletes(res, req.params.id);
+app.delete("/api/members/:id", upload.single("img"), (req,res) =>{
+    removeMembers(res, req.params.id);
 });
 
-const removeAthletes = async(res, id) => {
-    const athlete = await Athlete.findByIdAndDelete(id);
-    res.send(athlete);
+const removeMembers = async(res, id) => {
+    const member = await Member.findByIdAndDelete(id);
+    res.send(member);
 }
-const validateAthlete = (athlete) => {
+const validateMember = (member) => {
     const schema = Joi.object({
         _id: Joi.allow(""),
-        sport: Joi.allow(""),
+        phone: Joi.allow(""),
         awards: Joi.allow(""),
         name: Joi.string().min(3).required(),
         description: Joi.string().min(3).required()
     });
-    return schema.validate(athlete);
+    return schema.validate(member);
 
 };
 

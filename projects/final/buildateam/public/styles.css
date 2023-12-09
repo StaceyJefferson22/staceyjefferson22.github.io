@@ -5,7 +5,7 @@ body{
     background: url(https://wallpapercave.com/wp/wp2004258.jpg);
 }
 
-.athlete {
+.member {
     text-align: center;
     padding: 10px;
     margin: 10px;
@@ -13,19 +13,19 @@ body{
     border-radius: 5px;
 }
 
-.athlete img {
+.member img {
     max-width: 70%;
     max-height: 200px;
     display: block;
     margin: auto;
 }
 
-.athlete-details {
+.member-details {
     width: 300px;
     height: 100px;
 }
 
-#athlete-details-column {
+#member-details-column {
     padding: 10px;
     margin: 10px;
     background: red;
@@ -46,7 +46,7 @@ body{
     float: right;
 }
 
-#add-edit-athlete-container{
+#add-edit-member-container{
     padding: 10px;
     margin: 10px;
     background: red;
@@ -289,11 +289,11 @@ a:link {
         flex: 1;
         justify-content: center;
     }
-    .athlete{
+    .member{
         width: 30%;
         justify-content: center;
     }
-    #add-edit-athlete-container{
+    #add-edit-member-container{
         background-color: red;
         max-width: 30%;
         margin: auto;
