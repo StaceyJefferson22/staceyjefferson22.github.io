@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Men</title>
+        <link rel="stylesheet" href="normalstyles.css" />
+        <link rel="stylesheet" href="menstyles.css" />
+    </head>
+
+    <body id="body-color">
+        <header id="main-header">
+            <img id="logo" src="screenshot/logo.jpg" width="150" width="150">
+            <h1>Styling Trends of Elegance</h1>
+            <nav id="main-nav">
+                <div id="nav-toggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul id="main-nav-items">
+                    <li><a href="index.html">What is Styling Trends of Elegance?</a></li>
+                    <li><a href="avon.html">What is AVON?</a></li>
+                    <li><a href="rep.html">Meet Our Representatives!</a></li>
+                    <li><a href="signup.html">Join Our Team!</a></li>
+                    <li><a href="men.html">Products for Men!</a></li>
+                    <li><a href="https://final-eqgw.onrender.com/">Build-a-Team!</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id = "main-content">
+            <h3>Products for Men</h3>
+                <div id="product-section"></div>
+                <script src="men.js"></script>
+            <section class="info-section columns">
+                <section>
+                    <h3>Order Sheet</h3>
+                    <p>Men, fill out this sheet with your name, phone number, and email. Then, choose the item of your choice and agree to the terms below before submitting.
+                        We will call and email you once your order is ready for pick up.
+                    </p>
+                <form id="form-order">
+                    <p>
+                        <label for="order-name">Name: </label>
+                        <input type="text" id="order-name" name="order-name" required />
+                    </p>
+                    <p>
+                        <label for="phone-number">Phone Number: </label>
+                        <input type="text" id="phone-number" name="phone-number" required />
+                    </p>
+                    <p>
+                        <label for="email">Email: </label>
+                        <input type="text" id="email" name="email" required />
+                    </p>
+                    <p>
+                        <input type="radio" name="size" value="sssb" />
+                        <label for="sssb" class="inline">Skin-So-Soft Body Pads</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="size" value="sds" />
+                        <label for="sds" class="inline">Daily Skin Defense</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="size" value="prime" />
+                        <label for="prime" class="inline">AVON Prime</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="size" value="bls" />
+                        <label for="bls" class="inline">Black Suede</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="size" value="sg" />
+                        <label for="sg" class="inline">Shave Gel</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="size" value="drt" />
+                        <label for="drt" class="inline">24 Hours Sport Roll On</label>
+                    </p>
+    
+                    <p>
+                        <input type="checkbox" name="terms" />
+                        <label for="terms" class="inline">I agree to the terms.</label>
+                    </p>
+                    <p>
+                        <label for="options">Order Options</label>
+                        <select name="options">
+                            <option value="delivery">Delivery</option>
+                            <option value="pickup">Pickup</option>
+                        </select>
+                    </p>
+    
+                    <p>
+                        <button type="submit">Submit</button>
+                    </p>
+                </form>
+                </section>
+                <section id="results" class="hidden">
+                    <h4>Results</h4>
+                    <p>
+                        Your order has beeen added to the system. You will receive a phone call when it is ready.
+                    </p>
+                    </section>
+                </section>
+            <div id="footer">
+                <footer id ="main-footer">
+                <p><strong> &copy; Styling Trends of Elegance, LLC</strong></p>
+                <p><strong> 111 Trade Road, Cheraw, SC, 29520</strong></p>
+                <p><strong> Contact Us at: (843) 537-6536 or (843) 910-4631</strong></p>
+                </footer>
+            </div>
+            <script src="form.js"></script>
+        </main>
+    </body>
+</html>

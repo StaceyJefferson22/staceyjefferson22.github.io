@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Signup</title>
+        <link rel="stylesheet" href="normalstyles.css" />
+    </head>
+
+    <body>
+        <header id="main-header">
+            <img id="logo" src="screenshot/logo.jpg" height="150" width="150">
+            <h1>Styling Trends of Elegance</h1>
+            <nav id="main-nav">
+                <div id="nav-toggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul id="main-nav-items">
+                    <li><a href="index.html">What is Styling Trends of Elegance?</a></li>
+                    <li><a href="avon.html">What is AVON?</a></li>
+                    <li><a href="rep.html">Meet Our Representatives!</a></li>
+                    <li><a href="signup.html">Join Our Team!</a></li>
+                    <li><a href="men.html">Products for Men!</a></li>
+                    <li><a href="https://final-eqgw.onrender.com/">Build-a-Team!</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <h2>Sign Up Sheet</h2>
+            <p>
+                A message rom AVON: "Think Big, Earn Big Sell AVON part time, full-time, you decide how much!
+                Get serious discounts on orders for yourself and get comissions on customer orders."
+            </p>
+            <p>
+                "Be a beauty influencer, skin care expert, whatever-your-passion entrepreneur, from home or
+                on the go, live or virtually. For 137 years, we're still the supreme do-it-your-way opportunity
+                with the digital magic to power your business and the ultimate offer: Join for $0(free!) or with
+                one of our other sign-up options."
+                "NO HIDDEN FEES, NO MINIMUMs, NO KIDDING!"
+            </p>
+            <section class="info-section">
+            <form 
+            id="contact-form" 
+            action="https://api.web3forms.com/submit" 
+            method="POST">
+                
+            <input type="hidden" name="access_key" value="07aeabf8-f039-48b6-bebf-2c35618cc6c9">
+           
+            <p>
+                <label for="name">Name:</label>
+                <input id="name" type="text" placeholder="First and Last" name="name" required/>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required />
+            </p>
+            <p>
+                <label for="pN">Phone Number:</label>
+                <input id="pN" type="pN" name="pN" required />
+            </p>
+            <p>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+            </p>
+            <input
+                type="hidden"
+                name="redirect"
+                value="https://web3forms.com/success"
+            />
+            <input 
+                type="hidden"
+                name="subject"
+                value="Contact from AVON Website"
+            />
+            <p>
+                <button type="submit">Submit Form</button>
+            </p>
+            <p id ="aftermath"></p>
+
+            </form>
+            <iframe
+                id="google-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.172758873931!2d-79.94802609999999!3d34.7008223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8855049a109a72e7%3A0xf2f9f1f5236e3dbc!2s111%20Trade%20Rd%2C%20Cheraw%2C%20SC%2029520!5e0!3m2!1sen!2sus!4v1698121848151!5m2!1sen!2sus" 
+                width="270" height="200" style="border: 1px;;" 
+                allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <script src="contactme.js"></script>
+        </section>
+        </main>
+        <div id="footer">
+            <footer id ="main-footer">
+                <p><strong> &copy; Styling Trends of Elegance, LLC</strong></p>
+                <p><strong> 111 Trade Road, Cheraw, SC, 29520</strong></p>
+                <p><strong> Contact Us at: (843) 537-6536 or (843) 910-4631</strong></p>
+            </footer>
+        </div>
+    </body>
+    <!--Resources: Professor Plante's October 17th Example, Web3Forms, and GoogleMap-->
+</html>

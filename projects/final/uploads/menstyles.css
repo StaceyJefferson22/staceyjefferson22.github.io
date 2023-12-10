@@ -1,0 +1,45 @@
+/*  Structure */
+body{
+    background-color: coral;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section{
+    margin: 1%;
+    padding: 1%;
+    background-color: blanchedalmond;
+}
+
+/* Typography */
+h1{
+    margin-left: 24px;
+}
+h3{
+    text-align: center;
+}
+p{
+    line-height: 2em;
+}
+
+/* flex-container */
+.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Image */
+img{
+    transition: transform 0.1s;
+    height: 175px;
+    width: 175px;
+    border: 5px maroon solid;
+}
+
+img:hover{
+    transform: scale(1.90);
+}
+
+span{
+    margin-left: 3%;
+}
